@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1460578103395" name="http://www.co-ode.org/ontologies/teste_ontologia.owl" uri="teste_ontologia.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460578103395" name="http://www.semanticweb.org/ontologies/dataranges" uri="nova_ontologia_datatypes.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460578103395" name="http://www.semanticweb.org/owlapi/ontologies/ontology" uri="nova_ontologia.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460578103395" name="http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto" uri="roupa_produto_backup.owl"/>
+    </group>
+</catalog>

@@ -1,0 +1,407 @@
+Prefix: : <http://www.w3.org/2002/07/owl#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: xsd:positiveInteger
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:integer
+
+    
+ObjectProperty: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho>
+
+    Annotations: 
+        rdfs:label "temTamanho"
+    
+    
+ObjectProperty: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#eMarcaDe>
+
+    Annotations: 
+        rdfs:label "eMarcaDe"
+    
+    InverseOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>
+
+    Annotations: 
+        rdfs:label "temMarca"
+    
+    Characteristics: 
+        Functional
+    
+    InverseOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#eMarcaDe>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem>
+
+    Annotations: 
+        rdfs:label "temPaisDeOrigem"
+    
+    Characteristics: 
+        Functional
+    
+    
+DataProperty: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano>
+
+    Annotations: 
+        rdfs:label "ano"
+    
+    Characteristics: 
+        Functional
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>
+
+    Annotations: 
+        rdfs:label "ID"
+    
+    Characteristics: 
+        Functional
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#CamisasNacionais>
+
+    Annotations: 
+        rdfs:label "CamisasNacionais"
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+         and (<http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem> value <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Brasil>)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#CamisasGrandes>
+
+    Annotations: 
+        rdfs:label "CamisasGrandes"
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+         and ((<http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho> value <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#G>)
+         or (<http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho> value <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#GG>))
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+
+    Annotations: 
+        rdfs:label "Camisa"
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Roupa>
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#CamisasNovas>
+
+    Annotations: 
+        rdfs:label "CamisasNovas"
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+         and (<http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano> value 2016)
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Pais>
+
+    Annotations: 
+        rdfs:label "Pais"
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#CamisasImportadas>
+
+    Annotations: 
+        rdfs:label "CamisasImportadas"
+    
+    EquivalentTo: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+         and (not (<http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#CamisasNacionais>))
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Tamanho>
+
+    Annotations: 
+        rdfs:label "Tamanho"
+    
+    EquivalentTo: 
+        {<http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#G> , <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#GG> , <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#M> , <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#P> , <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#PP>}
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Marca>
+
+    Annotations: 
+        rdfs:label "Marca"
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Roupa>
+
+    Annotations: 
+        rdfs:label "Roupa"
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Produto>
+    
+    
+Class: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Produto>
+
+    Annotations: 
+        rdfs:label "Produto"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#China>
+
+    Annotations: 
+        rdfs:label "China"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Pais>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#p2"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Hering>
+
+    Annotations: 
+        rdfs:label "Hering"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Marca>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#m1"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Marisa>
+
+    Annotations: 
+        rdfs:label "Marisa"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Marca>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#m2"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Brasil>
+
+    Annotations: 
+        rdfs:label "Brasil"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Pais>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#p1"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#GG>
+
+    Annotations: 
+        rdfs:label "GG"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Tamanho>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#T2"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#camisa2>
+
+    Annotations: 
+        rdfs:label "camisa2"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#M>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Brasil>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Hering>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#c2",
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano>  "2016"^^xsd:positiveInteger
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#camisa1>
+
+    Annotations: 
+        rdfs:label "camisa1"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#China>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#GG>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Marisa>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#c1",
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano>  "2014"^^xsd:positiveInteger
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#camisa4>
+
+    Annotations: 
+        rdfs:label "camisa4"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#China>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Zara>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#G>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano>  "2015"^^xsd:positiveInteger,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#c4"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Franca>
+
+    Annotations: 
+        rdfs:label "França"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Pais>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#p3"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#camisa3>
+
+    Annotations: 
+        rdfs:label "camisa3"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Zara>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#P>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Franca>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#c3",
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano>  "2016"^^xsd:positiveInteger
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#camisa6>
+
+    Annotations: 
+        rdfs:label "camisa6"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#China>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#GG>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Hering>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#c6",
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano>  "2015"^^xsd:positiveInteger
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#P>
+
+    Annotations: 
+        rdfs:label "P"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Tamanho>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#T4"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#camisa5>
+
+    Annotations: 
+        rdfs:label "camisa5"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Camisa>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temTamanho>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#M>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temMarca>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Hering>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#temPaisDeOrigem>  <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Brasil>,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ano>  "2016"^^xsd:positiveInteger,
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#c5"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Zara>
+
+    Annotations: 
+        rdfs:label "Zara"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Marca>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#m3"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#M>
+
+    Annotations: 
+        rdfs:label "M"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Tamanho>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#T3"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#PP>
+
+    Annotations: 
+        rdfs:label "PP"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Tamanho>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#T5"
+    
+    
+Individual: <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#G>
+
+    Annotations: 
+        rdfs:label "G"@pt
+    
+    Types: 
+        <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#Tamanho>
+    
+    Facts:  
+     <http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto#ID>  "#T1"
+    
+    

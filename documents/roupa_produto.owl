@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/williambrepohl/ontologies/2016/3/roupa_produto">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Camisa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CamisasGrandes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CamisasImportadas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CamisasNacionais"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CamisasNovas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pais"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Produto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Roupa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tamanho"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eMarcaDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propriedadeMaior"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temMarca"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temTamanho"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ano"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brasil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Franca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#G"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GG"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#M"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Marisa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#P"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zara"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#camisa1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#camisa2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#camisa3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#camisa4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#camisa5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#camisa6"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#CamisasGrandes"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Camisa"/>
+            <ObjectUnionOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#temTamanho"/>
+                    <NamedIndividual IRI="#G"/>
+                </ObjectHasValue>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#temTamanho"/>
+                    <NamedIndividual IRI="#GG"/>
+                </ObjectHasValue>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CamisasImportadas"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Camisa"/>
+            <ObjectComplementOf>
+                <Class IRI="#CamisasNacionais"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CamisasNacionais"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Camisa"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#temPaisDeOrigem"/>
+                <NamedIndividual IRI="#Brasil"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CamisasNovas"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Camisa"/>
+            <DataHasValue>
+                <DataProperty IRI="#ano"/>
+                <Literal datatypeIRI="&xsd;integer">2016</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tamanho"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#P"/>
+            <NamedIndividual IRI="#M"/>
+            <NamedIndividual IRI="#GG"/>
+            <NamedIndividual IRI="#PP"/>
+            <NamedIndividual IRI="#G"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Camisa"/>
+        <Class IRI="#Roupa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CamisasGrandes"/>
+        <Class IRI="#Camisa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CamisasImportadas"/>
+        <Class IRI="#Camisa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CamisasNacionais"/>
+        <Class IRI="#Camisa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CamisasNovas"/>
+        <Class IRI="#Camisa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Roupa"/>
+        <Class IRI="#Produto"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Pais"/>
+        <NamedIndividual IRI="#Brasil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pais"/>
+        <NamedIndividual IRI="#China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pais"/>
+        <NamedIndividual IRI="#Franca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tamanho"/>
+        <NamedIndividual IRI="#G"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tamanho"/>
+        <NamedIndividual IRI="#GG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Marca"/>
+        <NamedIndividual IRI="#Hering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tamanho"/>
+        <NamedIndividual IRI="#M"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Marca"/>
+        <NamedIndividual IRI="#Marisa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tamanho"/>
+        <NamedIndividual IRI="#P"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tamanho"/>
+        <NamedIndividual IRI="#PP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Marca"/>
+        <NamedIndividual IRI="#Zara"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camisa"/>
+        <NamedIndividual IRI="#camisa1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camisa"/>
+        <NamedIndividual IRI="#camisa2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camisa"/>
+        <NamedIndividual IRI="#camisa3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camisa"/>
+        <NamedIndividual IRI="#camisa4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camisa"/>
+        <NamedIndividual IRI="#camisa5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camisa"/>
+        <NamedIndividual IRI="#camisa6"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temMarca"/>
+        <NamedIndividual IRI="#camisa1"/>
+        <NamedIndividual IRI="#Marisa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+        <NamedIndividual IRI="#camisa1"/>
+        <NamedIndividual IRI="#China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temTamanho"/>
+        <NamedIndividual IRI="#camisa1"/>
+        <NamedIndividual IRI="#GG"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temMarca"/>
+        <NamedIndividual IRI="#camisa2"/>
+        <NamedIndividual IRI="#Hering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+        <NamedIndividual IRI="#camisa2"/>
+        <NamedIndividual IRI="#Brasil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temTamanho"/>
+        <NamedIndividual IRI="#camisa2"/>
+        <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temMarca"/>
+        <NamedIndividual IRI="#camisa3"/>
+        <NamedIndividual IRI="#Zara"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+        <NamedIndividual IRI="#camisa3"/>
+        <NamedIndividual IRI="#Franca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temTamanho"/>
+        <NamedIndividual IRI="#camisa3"/>
+        <NamedIndividual IRI="#P"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temMarca"/>
+        <NamedIndividual IRI="#camisa4"/>
+        <NamedIndividual IRI="#Zara"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+        <NamedIndividual IRI="#camisa4"/>
+        <NamedIndividual IRI="#China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temTamanho"/>
+        <NamedIndividual IRI="#camisa4"/>
+        <NamedIndividual IRI="#G"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temMarca"/>
+        <NamedIndividual IRI="#camisa5"/>
+        <NamedIndividual IRI="#Hering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+        <NamedIndividual IRI="#camisa5"/>
+        <NamedIndividual IRI="#Brasil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temTamanho"/>
+        <NamedIndividual IRI="#camisa5"/>
+        <NamedIndividual IRI="#M"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temMarca"/>
+        <NamedIndividual IRI="#camisa6"/>
+        <NamedIndividual IRI="#Hering"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+        <NamedIndividual IRI="#camisa6"/>
+        <NamedIndividual IRI="#China"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temTamanho"/>
+        <NamedIndividual IRI="#camisa6"/>
+        <NamedIndividual IRI="#GG"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#Brasil"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#p1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#China"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#p2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#Franca"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#p3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#G"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#T1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#GG"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#T2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#Hering"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#m1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#M"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#T3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#Marisa"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#P"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#T4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#PP"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#T5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#Zara"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#m3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#camisa1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#c1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ano"/>
+        <NamedIndividual IRI="#camisa1"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">2014</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#camisa2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#c2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ano"/>
+        <NamedIndividual IRI="#camisa2"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#camisa3"/>
+        <Literal datatypeIRI="&xsd;string">#c3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ano"/>
+        <NamedIndividual IRI="#camisa3"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#camisa4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#c4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ano"/>
+        <NamedIndividual IRI="#camisa4"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#camisa5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#c5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ano"/>
+        <NamedIndividual IRI="#camisa5"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ID"/>
+        <NamedIndividual IRI="#camisa6"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">#c6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ano"/>
+        <NamedIndividual IRI="#camisa6"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">2015</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#temMarca"/>
+        <ObjectProperty IRI="#propriedadeMaior"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eMarcaDe"/>
+        <ObjectProperty IRI="#temMarca"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#temMarca"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#temPaisDeOrigem"/>
+    </FunctionalObjectProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#ID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#ano"/>
+    </FunctionalDataProperty>
+    <DataPropertyRange>
+        <DataProperty IRI="#ano"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Brasil</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Brasil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Camisa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Camisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CamisasGrandes</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CamisasGrandes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CamisasImportadas</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CamisasImportadas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CamisasNacionais</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CamisasNacionais</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CamisasNovas</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CamisasNovas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#China</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">China</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Franca</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">França</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#G</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">G</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GG</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">GG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hering</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Hering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ID</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#M</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">M</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Marca</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Marca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Marisa</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Marisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#P</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">P</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PP</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">PP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pais</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pais</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Produto</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Produto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Roupa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Roupa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tamanho</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tamanho</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Zara</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Zara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ano</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#camisa1</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">camisa1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#camisa2</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">camisa2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#camisa3</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">camisa3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#camisa4</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">camisa4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#camisa5</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">camisa5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#camisa6</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">camisa6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eMarcaDe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">eMarcaDe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temMarca</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">temMarca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temPaisDeOrigem</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">temPaisDeOrigem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temTamanho</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">temTamanho</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

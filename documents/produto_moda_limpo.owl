@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/tcc_ontologia/produto_moda"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/tcc_ontologia/produto_moda">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#blusa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#blusa_manga_longa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#calca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#calca_flare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#calca_jeans"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cardigan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#casaco"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#classificacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#classificacao_moda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#loja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#marca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#moda_feminina"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#moda_masculina"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#preenchimento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#produto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#produto_moda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#tamanho"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#tamanho_moda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#textura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#vestido"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#vestido_medio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem_classificacao"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem_cor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem_loja"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem_marca"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem_preenchimento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem_tamanho"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem_textura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descricao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numero_de_parcelas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#preco"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#preco_promocao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sku"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#url_imagem"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#valor_da_parcela"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ggg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#s"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xxl"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#preenchimento"/>
+        <ObjectUnionOf>
+            <Class IRI="#cor"/>
+            <Class IRI="#textura"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#blusa"/>
+        <Class IRI="#produto_moda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#blusa_manga_longa"/>
+        <Class IRI="#blusa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#calca"/>
+        <Class IRI="#produto_moda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#calca_flare"/>
+        <Class IRI="#calca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#calca_jeans"/>
+        <Class IRI="#calca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cardigan"/>
+        <Class IRI="#casaco"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#casaco"/>
+        <Class IRI="#produto_moda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#classificacao_moda"/>
+        <Class IRI="#classificacao"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#moda_feminina"/>
+        <Class IRI="#classificacao_moda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#moda_masculina"/>
+        <Class IRI="#classificacao_moda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <Class IRI="#produto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#tem_classificacao"/>
+                <Class IRI="#classificacao_moda"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#tem_classificacao"/>
+                <Class IRI="#classificacao_moda"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#tem_loja"/>
+                <Class IRI="#loja"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#tem_loja"/>
+                <Class IRI="#loja"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#tem_marca"/>
+                <Class IRI="#marca"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#tem_marca"/>
+                <Class IRI="#marca"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#tem_preenchimento"/>
+                <Class IRI="#preenchimento"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#tem_preenchimento"/>
+                <Class IRI="#preenchimento"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#tem_tamanho"/>
+                <Class IRI="#tamanho_moda"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#tem_tamanho"/>
+                <Class IRI="#tamanho_moda"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#descricao"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#descricao"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#nome"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#nome"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#preco"/>
+                <Datatype abbreviatedIRI="xsd:float"/>
+            </DataSomeValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#preco"/>
+                <Datatype abbreviatedIRI="xsd:float"/>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#sku"/>
+                <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+            </DataSomeValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#sku"/>
+                <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#url"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#url"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#url_imagem"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#url_imagem"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#numero_de_parcelas"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#preco_promocao"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#produto_moda"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#valor_da_parcela"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#tamanho_moda"/>
+        <Class IRI="#tamanho"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#vestido"/>
+        <Class IRI="#produto_moda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#vestido"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tem_classificacao"/>
+            <Class IRI="#moda_feminina"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#vestido_medio"/>
+        <Class IRI="#vestido"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#classificacao"/>
+        <Class IRI="#cor"/>
+        <Class IRI="#loja"/>
+        <Class IRI="#marca"/>
+        <Class IRI="#produto"/>
+        <Class IRI="#tamanho"/>
+        <Class IRI="#textura"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#gg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#ggg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#l"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#pp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#s"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#xl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#xs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#tamanho_moda"/>
+        <NamedIndividual IRI="#xxl"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#g"/>
+        <NamedIndividual IRI="#l"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#gg"/>
+        <NamedIndividual IRI="#xl"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#ggg"/>
+        <NamedIndividual IRI="#xxl"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#p"/>
+        <NamedIndividual IRI="#s"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#pp"/>
+        <NamedIndividual IRI="#xs"/>
+    </SameIndividual>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#g"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#gg"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#ggg"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#l"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#m"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#p"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#pp"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#s"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#xl"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#xs"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#xxl"/>
+        <Literal datatypeIRI="&xsd;positiveInteger">13</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tem_cor"/>
+        <ObjectProperty IRI="#tem_preenchimento"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tem_textura"/>
+        <ObjectProperty IRI="#tem_preenchimento"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#tem_marca"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tem_classificacao"/>
+        <Class IRI="#classificacao"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tem_cor"/>
+        <Class IRI="#cor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tem_loja"/>
+        <Class IRI="#loja"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tem_marca"/>
+        <Class IRI="#marca"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tem_tamanho"/>
+        <Class IRI="#tamanho"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tem_textura"/>
+        <Class IRI="#textura"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sku"/>
+        <DataProperty IRI="#id"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#id"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#sku"/>
+    </FunctionalDataProperty>
+    <DataPropertyRange>
+        <DataProperty IRI="#descricao"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nome"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numero_de_parcelas"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#preco"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#preco_promocao"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sku"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#url"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#url_imagem"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#valor_da_parcela"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#blusa</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Blusa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#blusa_manga_longa</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Blusa Manga Longa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#calca</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Calça</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#calca_flare</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Calça Flare</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#calca_jeans</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Calça Jeans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cardigan</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Cardigan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#casaco</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Casaco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#classificacao</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Classificação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#classificacao_moda</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Classificação Moda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cor</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Cor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#descricao</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Descrição</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#g</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">G</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#gg</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">GG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ggg</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">GGG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#id</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#l</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">L</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#loja</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Loja</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#m</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">M</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#marca</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Marca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#moda_feminina</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Moda Feminina</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#moda_masculina</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Moda Masculina</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nome</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Nome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numero_de_parcelas</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Número de Parcelas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#p</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">P</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pp</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">PP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#preco</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Preço</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#preco_promocao</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Preço Promoção</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#preenchimento</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Preenchimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#produto</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Produto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#produto_moda</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Produto Moda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#s</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">S</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sku</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">SKU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tamanho</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tamanho</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tamanho_moda</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tamanho Moda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tem_classificacao</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem Classificação</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tem_cor</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem Cor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tem_loja</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem Loja</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tem_marca</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem Marca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tem_preenchimento</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem Preenchimento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tem_tamanho</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem Tamanho</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tem_textura</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Tem Textura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#textura</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Textura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#url</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">URL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#url_imagem</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">URL Imagem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#valor_da_parcela</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Valor da Parcela</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#vestido</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Vestido</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#vestido_medio</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Vestido Médio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xl</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">XL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xs</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">XS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xxl</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">XXL</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
