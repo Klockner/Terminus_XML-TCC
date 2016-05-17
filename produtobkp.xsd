@@ -83,7 +83,7 @@
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="classificacao" minOccurs="1">
+                            <xs:element name="classificacao" minOccurs="1" maxOccurs="unbounded">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                         <xs:minLength value="1"/>

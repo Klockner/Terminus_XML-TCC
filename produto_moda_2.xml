@@ -22,7 +22,6 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Casaco</categoria>
         <subcategoria>Cardigan</subcategoria>
@@ -46,7 +45,6 @@
         <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <plus-size>Não</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>
         <subcategoria>Blusa Manga Longa</subcategoria>
@@ -69,10 +67,6 @@
         </preenchimento>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <tamanho>G</tamanho>
-        <tamanho>GG</tamanho>
-        <tamanho>GGG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -96,7 +90,6 @@
         <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Flare</subcategoria>
@@ -122,7 +115,6 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>
         <subcategoria>Blusa Manga Longa</subcategoria>
@@ -146,8 +138,7 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
-        <plus-size>Sim</plus-size>
-        <classificacao>Moda Feminina</classificacao>
+        <classificacao>XXXX</classificacao>
         <categoria>Vestido</categoria>
         <subcategoria>Vestido Médio</subcategoria>
     </produto-de-moda>
@@ -171,7 +162,6 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Masculina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -197,7 +187,6 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Masculina</classificacao>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>

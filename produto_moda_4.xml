@@ -69,9 +69,6 @@
         </preenchimento>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <tamanho>G</tamanho>
-        <tamanho>GG</tamanho>
-        <tamanho>GGG</tamanho>
         <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
@@ -96,7 +93,7 @@
         <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <plus-size>Não</plus-size>
+        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Flare</subcategoria>

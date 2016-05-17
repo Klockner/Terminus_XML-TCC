@@ -67,9 +67,6 @@
         </preenchimento>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <tamanho>G</tamanho>
-        <tamanho>GG</tamanho>
-        <tamanho>GGG</tamanho>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -141,7 +138,7 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
-        <classificacao>XXXX</classificacao>
+        <classificacao>Moda Feminina</classificacao>
         <categoria>Vestido</categoria>
         <subcategoria>Vestido Médio</subcategoria>
     </produto-de-moda>
