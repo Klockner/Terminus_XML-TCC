@@ -27,7 +27,8 @@ public class Prova1 {
     }
     
     //Finds especific element in the nodes
-    public void init() {
+    public String init() {
+        StringBuilder sb = new StringBuilder();
         //Get produto-de-moda nodes
         NodeList nodeList = doc.getElementsByTagName("produto-de-moda");
         //Visit all the nodes
@@ -37,8 +38,10 @@ public class Prova1 {
                 Element element = (Element) nNode;
                 if (element.getElementsByTagName("categoria").item(0).getTextContent().equalsIgnoreCase("vestido")) {
                     System.out.println("Classificação: " + element.getElementsByTagName("classificacao").item(0).getTextContent());
+                    sb.append("Classificação: ").append(element.getElementsByTagName("classificacao").item(0).getTextContent());
                 }
             }
         }
+        return sb.toString();
     }
 }

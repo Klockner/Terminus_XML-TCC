@@ -27,7 +27,8 @@ public class Prova2 {
     }
     
     //Finds especific element in the nodes
-    public void init() {
+    public String init() {
+        StringBuilder sb = new StringBuilder();
         NodeList nodeList = doc.getElementsByTagName("produto-de-moda");
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node nNode = nodeList.item(i);
@@ -40,9 +41,13 @@ public class Prova2 {
                         System.out.println("SKU: " + element.getElementsByTagName("sku").item(0).getTextContent());
                         System.out.println("PlusSize: " + element.getElementsByTagName("plus-size").item(0).getTextContent());
                         System.out.println("Categoria: " + element.getElementsByTagName("categoria").item(0).getTextContent());
+                        sb.append("SKU: ").append(element.getElementsByTagName("sku").item(0).getTextContent());
+                        sb.append("\nPlusSize: ").append(element.getElementsByTagName("plus-size").item(0).getTextContent());
+                        sb.append("\nCategoria: ").append(element.getElementsByTagName("categoria").item(0).getTextContent());
                     }
                 }
             }
         }
+        return sb.toString();
     }
 }

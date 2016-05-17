@@ -1,6 +1,10 @@
 package GUI;
 
 import Program.ControlClass;
+import Program.Provas.Prova1;
+import Program.Provas.Prova2;
+import Program.Provas.Prova3;
+import Program.Util.OpenFile;
 import Program.Validation.Validates;
 import java.awt.Toolkit;
 import java.util.Enumeration;
@@ -8,6 +12,7 @@ import javax.swing.AbstractButton;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import org.w3c.dom.Document;
 /*
 GABRIEL, DELETAR DEPOIS DE LER
 Elemento                Descrição
@@ -31,6 +36,7 @@ public class MainWindow extends javax.swing.JFrame {
     //Attributes
     private int selectedFunction;
     private final ControlClass controlClass;
+    private Document docXml;
 
     //Constructor
     public MainWindow(ControlClass controlClass) {
@@ -301,7 +307,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jRadioButton_ListIndividualTags)
                     .addComponent(jRadioButton_ListIndividualsByConstraint)
                     .addComponent(jRadioButton_ListIndividualHierarchy))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 149, Short.MAX_VALUE))
         );
         jPanel_FunctionsLayout.setVerticalGroup(
             jPanel_FunctionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -577,7 +583,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_ProofsLayout.createSequentialGroup()
                         .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jRadioButton_Proof3b, javax.swing.GroupLayout.PREFERRED_SIZE, 79, Short.MAX_VALUE)
+                            .addComponent(jRadioButton_Proof3b, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jRadioButton_Proof3a, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jRadioButton_Proof2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jRadioButton_Proof1a, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -849,6 +855,11 @@ public class MainWindow extends javax.swing.JFrame {
                 + "em vestido são moda\n"
                 + "feminina,\n"
                 + "mas por asserção.");
+        
+        Prova1 prova1a = new Prova1("produto_moda_1.xml");
+        String result = prova1a.init();
+        jTextArea_Results.setText("Valores encontrados na Tag Classificacao onde a Tag Categoria = Vestido:\n\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof1aActionPerformed
 
     private void jRadioButton_Proof1bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof1bActionPerformed
@@ -868,6 +879,11 @@ public class MainWindow extends javax.swing.JFrame {
                 + "ser asserido, nenhum\n"
                 + "vestido foi classificado\n"
                 + "como moda feminina.");
+        
+        Prova1 prova1b = new Prova1("produto_moda_2.xml");
+        String result = prova1b.init();
+        jTextArea_Results.setText("Valores encontrados na Tag Classificacao onde a Tag Categoria = Vestido:\n\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof1bActionPerformed
 
     private void jRadioButton_Proof2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof2ActionPerformed
@@ -888,6 +904,11 @@ public class MainWindow extends javax.swing.JFrame {
                 + "plus size, mas somente\n"
                 + "porque isto foi\n"
                 + "asserido.");
+        
+        Prova2 prova2 = new Prova2("produto_moda_3.xml");
+        String result = prova2.init();
+        jTextArea_Results.setText("Indivíduo identificado por 1200827 satisfaz as condições:\n\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof2ActionPerformed
 
     private void jRadioButton_Proof3aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3aActionPerformed
@@ -901,6 +922,8 @@ public class MainWindow extends javax.swing.JFrame {
                 "Mostrar que uma calça\n"
                 + "pode ser dita plus size\n"
                 + "inconsistentemente.");
+        String result = validatesModel("produto_moda_4.xsd");
+        jTextArea_Results.setText(result);
     }//GEN-LAST:event_jRadioButton_Proof3aActionPerformed
 
     private void jRadioButton_Proof3bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3bActionPerformed
@@ -915,6 +938,11 @@ public class MainWindow extends javax.swing.JFrame {
                 "Mostrar que uma calça\n"
                 + "pode ser dita plus size\n"
                 + "inconsistentemente.");
+        
+        Prova3 prova3 = new Prova3("produto_moda_4.xml");
+        String result = prova3.init();
+        jTextArea_Results.setText(result);
+        
     }//GEN-LAST:event_jRadioButton_Proof3bActionPerformed
 
     private void jRadioButton_Proof4aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof4aActionPerformed
@@ -1021,6 +1049,8 @@ public class MainWindow extends javax.swing.JFrame {
     private void jCheckBox_ActivateProofsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_ActivateProofsActionPerformed
         this.jTextArea_Description.setText("");
         this.jLabel_ProofTitle.setText("");
+        jTextArea_Results.setLineWrap(true);
+        jTextArea_Results.setWrapStyleWord(true);
         if (this.jCheckBox_ActivateProofs.isSelected()) {
             activateProofButtons(true);
             activateFunctionButtons(false);
@@ -1159,8 +1189,10 @@ public class MainWindow extends javax.swing.JFrame {
 
     //Method that loads the XML model as well as the XSD schema
     private void loadModel() {
-        Validates validates = new Validates();
-        if (validates.validateModel(xmlFullFileName, xsdFullFileName)) {
+        String nomeArquivo = jTextField_ModelFile.getText();
+        OpenFile openFile = new OpenFile();
+        docXml = openFile.createDoc(nomeArquivo);
+        if (docXml != null) {
             loadModelSucess();
         } else {
             loadModelFail();
@@ -1169,14 +1201,13 @@ public class MainWindow extends javax.swing.JFrame {
 
     //Method that runs a specific function defined by the 
     private void run() {
-        String result;
-        
-        result = "";
+        String result = "";
         switch (selectedFunction){
             case 0: //No function is selected
                 result = "Nenhuma função foi selecionada!";
                 break;
             case 1: //Model Check function
+                result = validatesModel("produto.xsd");
                 break;
             case 2: //List Individual Tags function
                 break;
@@ -1190,5 +1221,15 @@ public class MainWindow extends javax.swing.JFrame {
                 break;
         }
         this.jTextArea_Results.setText(result);
+    }
+    
+    //Validates model and return the 
+    private String validatesModel(String xsdFileName) {
+        boolean isValid = Validates.validateModel(jTextField_ModelFile.getText(), xsdFileName);
+        if (isValid) {
+            return "Modelo válido!";
+        } else {
+            return "Modelo inválido!";
+        }
     }
 }

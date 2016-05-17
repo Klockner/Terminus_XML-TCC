@@ -15,8 +15,8 @@ public class Main {
         String fileXml = "produtos.xml";
         String fileXsd = "produto.xsd";
         
-        boolean isValido = Validates.validateModel(fileXml, fileXsd);
-        if (isValido) {
+        boolean isValid = Validates.validateModel(fileXml, fileXsd);
+        if (isValid) {
             System.out.println("XML válido!");
         } else {
             System.out.println("Não foi possível validar o XML.");

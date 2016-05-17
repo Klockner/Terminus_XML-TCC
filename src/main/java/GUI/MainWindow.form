@@ -361,7 +361,7 @@
                               <Component id="jRadioButton_ListIndividualsByConstraint" min="-2" max="-2" attributes="0"/>
                               <Component id="jRadioButton_ListIndividualHierarchy" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="149" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -756,7 +756,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jRadioButton_Proof3b" pref="79" max="32767" attributes="0"/>
+                                      <Component id="jRadioButton_Proof3b" max="32767" attributes="0"/>
                                       <Component id="jRadioButton_Proof3a" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jRadioButton_Proof2" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jRadioButton_Proof1a" alignment="0" max="32767" attributes="0"/>
