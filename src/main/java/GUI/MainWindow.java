@@ -3,7 +3,9 @@ package GUI;
 import Program.ControlClass;
 import Program.Provas.Prova1;
 import Program.Provas.Prova2;
-import Program.Deprecated.Prova3;
+import Program.Provas.Prova3;
+import Program.Provas.Prova4;
+import Program.Provas.Prova5;
 import Program.Util.OpenFile;
 import Program.Validation.Validates;
 import java.awt.Toolkit;
@@ -930,7 +932,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton_Proof3bActionPerformed
 
     private void jRadioButton_Proof4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof4ActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_6.xml");
+        this.jTextField_ModelFile.setText("produto_prova4.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Realização – Hierarquia de Indivíduo");
         this.jRadioButton_ListIndividualHierarchyActionPerformed(evt);
@@ -943,10 +945,14 @@ public class MainWindow extends javax.swing.JFrame {
                 + "conceitos de um\n"
                 + "indivíduo a partir\n"
                 + "de hierarquia.");
+        
+        Prova4 prova4 = new Prova4("produto_prova4.xml");
+        String result = prova4.init();
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof4ActionPerformed
 
     private void jRadioButton_Proof5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof5ActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_3.xml");
+        this.jTextField_ModelFile.setText("produto_prova5.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Recuperação – Listar Indivíduos de Conceito");
         this.jRadioButton_ListIndividualsByConstraintActionPerformed(evt);
@@ -962,6 +968,11 @@ public class MainWindow extends javax.swing.JFrame {
                 + "dentro de determinado\n"
                 + "conceito se isto for\n"
                 + "asserido.");
+        
+        Prova5 prova5 = new Prova5("produto_prova5.xml");
+        String result = prova5.init();
+        jTextArea_Results.setText("Indivíduos que satisfazem as restrições:\nCategoria = Calça\nPlusSize = Sim\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof5ActionPerformed
 
     private void jRadioButton_Proof6aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6aActionPerformed
