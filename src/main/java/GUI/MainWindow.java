@@ -3,7 +3,7 @@ package GUI;
 import Program.ControlClass;
 import Program.Provas.Prova1;
 import Program.Provas.Prova2;
-import Program.Provas.Prova3;
+import Program.Deprecated.Prova3;
 import Program.Util.OpenFile;
 import Program.Validation.Validates;
 import java.awt.Toolkit;
@@ -37,6 +37,7 @@ public class MainWindow extends javax.swing.JFrame {
     private int selectedFunction;
     private final ControlClass controlClass;
     private Document docXml;
+    private String modelXsd;
 
     //Constructor
     public MainWindow(ControlClass controlClass) {
@@ -105,12 +106,10 @@ public class MainWindow extends javax.swing.JFrame {
         jRadioButton_Proof2 = new javax.swing.JRadioButton();
         jRadioButton_Proof3a = new javax.swing.JRadioButton();
         jRadioButton_Proof3b = new javax.swing.JRadioButton();
-        jRadioButton_Proof4a = new javax.swing.JRadioButton();
-        jRadioButton_Proof4b = new javax.swing.JRadioButton();
+        jRadioButton_Proof4 = new javax.swing.JRadioButton();
         jRadioButton_Proof5 = new javax.swing.JRadioButton();
-        jRadioButton_Proof6 = new javax.swing.JRadioButton();
-        jRadioButton_Proof7a = new javax.swing.JRadioButton();
-        jRadioButton_Proof7b = new javax.swing.JRadioButton();
+        jRadioButton_Proof6a = new javax.swing.JRadioButton();
+        jRadioButton_Proof6b = new javax.swing.JRadioButton();
         jCheckBox_ActivateProofs = new javax.swing.JCheckBox();
         jPanel_ProofTitle = new javax.swing.JPanel();
         jLabel_ProofTitle = new javax.swing.JLabel();
@@ -127,12 +126,12 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup_Proofs.add(jRadioButton_Proof2);
         buttonGroup_Proofs.add(jRadioButton_Proof3a);
         buttonGroup_Proofs.add(jRadioButton_Proof3b);
-        buttonGroup_Proofs.add(jRadioButton_Proof4a);
-        buttonGroup_Proofs.add(jRadioButton_Proof4b);
+        buttonGroup_Proofs.add(jRadioButton_Proof3a);
+        buttonGroup_Proofs.add(jRadioButton_Proof3b);
+        buttonGroup_Proofs.add(jRadioButton_Proof4);
         buttonGroup_Proofs.add(jRadioButton_Proof5);
-        buttonGroup_Proofs.add(jRadioButton_Proof6);
-        buttonGroup_Proofs.add(jRadioButton_Proof7a);
-        buttonGroup_Proofs.add(jRadioButton_Proof7b);
+        buttonGroup_Proofs.add(jRadioButton_Proof6a);
+        buttonGroup_Proofs.add(jRadioButton_Proof6b);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OWL API - TEST WINDOW");
@@ -513,21 +512,12 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton_Proof4a.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jRadioButton_Proof4a.setText("Prova 4-a");
-        jRadioButton_Proof4a.setEnabled(false);
-        jRadioButton_Proof4a.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton_Proof4.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        jRadioButton_Proof4.setText("Prova 4");
+        jRadioButton_Proof4.setEnabled(false);
+        jRadioButton_Proof4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_Proof4aActionPerformed(evt);
-            }
-        });
-
-        jRadioButton_Proof4b.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jRadioButton_Proof4b.setText("Prova 4-b");
-        jRadioButton_Proof4b.setEnabled(false);
-        jRadioButton_Proof4b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_Proof4bActionPerformed(evt);
+                jRadioButton_Proof4ActionPerformed(evt);
             }
         });
 
@@ -540,30 +530,21 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton_Proof6.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jRadioButton_Proof6.setText("Prova 6");
-        jRadioButton_Proof6.setEnabled(false);
-        jRadioButton_Proof6.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton_Proof6a.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        jRadioButton_Proof6a.setText("Prova 6-a");
+        jRadioButton_Proof6a.setEnabled(false);
+        jRadioButton_Proof6a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_Proof6ActionPerformed(evt);
+                jRadioButton_Proof6aActionPerformed(evt);
             }
         });
 
-        jRadioButton_Proof7a.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jRadioButton_Proof7a.setText("Prova 7-a");
-        jRadioButton_Proof7a.setEnabled(false);
-        jRadioButton_Proof7a.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButton_Proof6b.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        jRadioButton_Proof6b.setText("Prova6-b");
+        jRadioButton_Proof6b.setEnabled(false);
+        jRadioButton_Proof6b.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_Proof7aActionPerformed(evt);
-            }
-        });
-
-        jRadioButton_Proof7b.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
-        jRadioButton_Proof7b.setText("Prova 7-b");
-        jRadioButton_Proof7b.setEnabled(false);
-        jRadioButton_Proof7b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton_Proof7bActionPerformed(evt);
+                jRadioButton_Proof6bActionPerformed(evt);
             }
         });
 
@@ -582,51 +563,51 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_ProofsLayout.createSequentialGroup()
-                        .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jRadioButton_Proof3b, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof3a, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof1a, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof1b, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jRadioButton_Proof2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton_Proof1a, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton_Proof1b, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jRadioButton_Proof3b, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                                .addComponent(jRadioButton_Proof3a, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton_Proof4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jRadioButton_Proof4b, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
                             .addComponent(jRadioButton_Proof5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof4a, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof7a, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jRadioButton_Proof7b, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jRadioButton_Proof6a, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jRadioButton_Proof6b, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jCheckBox_ActivateProofs))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel_ProofsLayout.setVerticalGroup(
             jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_ProofsLayout.createSequentialGroup()
-                .addComponent(jCheckBox_ActivateProofs)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_ProofsLayout.createSequentialGroup()
-                        .addComponent(jRadioButton_Proof1a)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton_Proof1b))
+                        .addComponent(jCheckBox_ActivateProofs)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                        .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_ProofsLayout.createSequentialGroup()
+                                .addComponent(jRadioButton_Proof1a)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton_Proof1b)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton_Proof2))
+                            .addGroup(jPanel_ProofsLayout.createSequentialGroup()
+                                .addComponent(jRadioButton_Proof5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton_Proof6a)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton_Proof6b)))
+                        .addGap(70, 70, 70))
                     .addGroup(jPanel_ProofsLayout.createSequentialGroup()
-                        .addComponent(jRadioButton_Proof4a)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jRadioButton_Proof3a)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton_Proof4b)))
+                        .addComponent(jRadioButton_Proof3b)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton_Proof2)
-                    .addComponent(jRadioButton_Proof5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton_Proof3a)
-                    .addComponent(jRadioButton_Proof6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel_ProofsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton_Proof3b)
-                    .addComponent(jRadioButton_Proof7a))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton_Proof7b)
+                .addComponent(jRadioButton_Proof4)
                 .addContainerGap())
         );
 
@@ -757,6 +738,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.jTextArea_Description.setText(
                 "Verifica a validade do\n"
                 + "modelo carregado.");
+        this.run();
     }//GEN-LAST:event_jRadioButton_ModelCheckActionPerformed
 
     private void jRadioButton_IndividualSatisfiesConstraintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_IndividualSatisfiesConstraintActionPerformed
@@ -839,7 +821,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton_ListIndividualHierarchyActionPerformed
 
     private void jRadioButton_Proof1aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof1aActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_1.xml");
+        this.jTextField_ModelFile.setText("produto_prova1a.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Classificação - Vestidos Pertencem a Moda Feminina");
         this.jRadioButton_ListTagValuesActionPerformed(evt);
@@ -856,14 +838,14 @@ public class MainWindow extends javax.swing.JFrame {
                 + "feminina,\n"
                 + "mas por asserção.");
         
-        Prova1 prova1a = new Prova1("produto_moda_1.xml");
+        Prova1 prova1a = new Prova1("produto_prova1a.xml");
         String result = prova1a.init();
         jTextArea_Results.setText("Valores encontrados na Tag Classificacao onde a Tag Categoria = Vestido:\n\n");
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof1aActionPerformed
 
     private void jRadioButton_Proof1bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof1bActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_2.xml");
+        this.jTextField_ModelFile.setText("produto_prova1b.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Classificação - Vestidos Não Pertencem a Moda Feminina");
         this.jRadioButton_ListTagValuesActionPerformed(evt);
@@ -880,14 +862,14 @@ public class MainWindow extends javax.swing.JFrame {
                 + "vestido foi classificado\n"
                 + "como moda feminina.");
         
-        Prova1 prova1b = new Prova1("produto_moda_2.xml");
+        Prova1 prova1b = new Prova1("produto_prova1b.xml");
         String result = prova1b.init();
         jTextArea_Results.setText("Valores encontrados na Tag Classificacao onde a Tag Categoria = Vestido:\n\n");
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof1bActionPerformed
 
     private void jRadioButton_Proof2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof2ActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_3.xml");
+        this.jTextField_ModelFile.setText("produto_prova2.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Validação de Instâncias – Calça Plus Size");
         this.jRadioButton_IndividualSatisfiesConstraintActionPerformed(evt);
@@ -905,48 +887,15 @@ public class MainWindow extends javax.swing.JFrame {
                 + "porque isto foi\n"
                 + "asserido.");
         
-        Prova2 prova2 = new Prova2("produto_moda_3.xml");
+        Prova2 prova2 = new Prova2("produto_prova2.xml");
         String result = prova2.init();
         jTextArea_Results.setText("Indivíduo identificado por 1200827 satisfaz as condições:\n\n");
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof2ActionPerformed
 
     private void jRadioButton_Proof3aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3aActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_4.xml");
-        this.loadModel();
-        this.jLabel_ProofTitle.setText("Inconsistência de Classificação");
-        this.jRadioButton_ModelCheckActionPerformed(evt);
-        this.jRadioButton_ModelCheck.setSelected(true);
-        this.jTextArea_Description.setForeground(new java.awt.Color(204, 0, 0));
-        this.jTextArea_Description.setText(
-                "Mostrar que uma calça\n"
-                + "pode ser dita plus size\n"
-                + "inconsistentemente.");
-        String result = validatesModel("produto_moda_4.xsd");
-        jTextArea_Results.setText(result);
-    }//GEN-LAST:event_jRadioButton_Proof3aActionPerformed
-
-    private void jRadioButton_Proof3bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3bActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_4.xml");
-        this.loadModel();
-        this.jLabel_ProofTitle.setText("Inconsistência de Classificação");
-        this.jRadioButton_ListIndividualTagsActionPerformed(evt);
-        this.jRadioButton_ListIndividualTags.setSelected(true);
-        this.jTextField_IndividualID.setText("1868494");
-        this.jTextArea_Description.setForeground(new java.awt.Color(204, 0, 0));
-        this.jTextArea_Description.setText(
-                "Mostrar que uma calça\n"
-                + "pode ser dita plus size\n"
-                + "inconsistentemente.");
-        
-        Prova3 prova3 = new Prova3("produto_moda_4.xml");
-        String result = prova3.init();
-        jTextArea_Results.setText(result);
-        
-    }//GEN-LAST:event_jRadioButton_Proof3bActionPerformed
-
-    private void jRadioButton_Proof4aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof4aActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_5.xml");
+        this.jTextField_ModelFile.setText("produto_prova3a.xml");
+        modelXsd = "produto_prova3.xsd";
         this.loadModel();
         this.jLabel_ProofTitle.setText("Inconsistência de Asserções");
         this.jRadioButton_ModelCheckActionPerformed(evt);
@@ -958,10 +907,10 @@ public class MainWindow extends javax.swing.JFrame {
                 + "de preenchimentos\n"
                 + "inconsistentes com\n"
                 + "o asserido.");
-    }//GEN-LAST:event_jRadioButton_Proof4aActionPerformed
+    }//GEN-LAST:event_jRadioButton_Proof3aActionPerformed
 
-    private void jRadioButton_Proof4bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof4bActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_5.xml");
+    private void jRadioButton_Proof3bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3bActionPerformed
+        this.jTextField_ModelFile.setText("produto_prova3b.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Inconsistência de Asserções");
         this.jRadioButton_ListIndividualTagsActionPerformed(evt);
@@ -974,9 +923,13 @@ public class MainWindow extends javax.swing.JFrame {
                 + "de preenchimentos\n"
                 + "inconsistentes com\n"
                 + "o asserido.");
-    }//GEN-LAST:event_jRadioButton_Proof4bActionPerformed
+        
+        Prova3 prova3 = new Prova3("produto_prova3b.xml");
+        String result = prova3.init();
+        jTextArea_Results.append(result);
+    }//GEN-LAST:event_jRadioButton_Proof3bActionPerformed
 
-    private void jRadioButton_Proof5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof5ActionPerformed
+    private void jRadioButton_Proof4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof4ActionPerformed
         this.jTextField_ModelFile.setText("produto_moda_6.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Realização – Hierarquia de Indivíduo");
@@ -990,9 +943,9 @@ public class MainWindow extends javax.swing.JFrame {
                 + "conceitos de um\n"
                 + "indivíduo a partir\n"
                 + "de hierarquia.");
-    }//GEN-LAST:event_jRadioButton_Proof5ActionPerformed
+    }//GEN-LAST:event_jRadioButton_Proof4ActionPerformed
 
-    private void jRadioButton_Proof6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6ActionPerformed
+    private void jRadioButton_Proof5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof5ActionPerformed
         this.jTextField_ModelFile.setText("produto_moda_3.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Recuperação – Listar Indivíduos de Conceito");
@@ -1009,9 +962,9 @@ public class MainWindow extends javax.swing.JFrame {
                 + "dentro de determinado\n"
                 + "conceito se isto for\n"
                 + "asserido.");
-    }//GEN-LAST:event_jRadioButton_Proof6ActionPerformed
+    }//GEN-LAST:event_jRadioButton_Proof5ActionPerformed
 
-    private void jRadioButton_Proof7aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof7aActionPerformed
+    private void jRadioButton_Proof6aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6aActionPerformed
         this.jTextField_ModelFile.setText("produto_moda_1.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Diminuição da Ambiguidade – Listar Indivíduos Tamanho L");
@@ -1027,9 +980,9 @@ public class MainWindow extends javax.swing.JFrame {
                 + "relações de \n"
                 + "equivalência do modelo\n"
                 + "não semântico.");
-    }//GEN-LAST:event_jRadioButton_Proof7aActionPerformed
+    }//GEN-LAST:event_jRadioButton_Proof6aActionPerformed
 
-    private void jRadioButton_Proof7bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof7bActionPerformed
+    private void jRadioButton_Proof6bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6bActionPerformed
         this.jTextField_ModelFile.setText("produto_moda_1.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Diminuição da Ambiguidade – Listar Indivíduos Tamanho G");
@@ -1044,7 +997,7 @@ public class MainWindow extends javax.swing.JFrame {
                 + "relações de \n"
                 + "equivalência do modelo\n"
                 + "não semântico.");
-    }//GEN-LAST:event_jRadioButton_Proof7bActionPerformed
+    }//GEN-LAST:event_jRadioButton_Proof6bActionPerformed
 
     private void jCheckBox_ActivateProofsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_ActivateProofsActionPerformed
         this.jTextArea_Description.setText("");
@@ -1107,12 +1060,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton_Proof2;
     private javax.swing.JRadioButton jRadioButton_Proof3a;
     private javax.swing.JRadioButton jRadioButton_Proof3b;
-    private javax.swing.JRadioButton jRadioButton_Proof4a;
-    private javax.swing.JRadioButton jRadioButton_Proof4b;
+    private javax.swing.JRadioButton jRadioButton_Proof4;
     private javax.swing.JRadioButton jRadioButton_Proof5;
-    private javax.swing.JRadioButton jRadioButton_Proof6;
-    private javax.swing.JRadioButton jRadioButton_Proof7a;
-    private javax.swing.JRadioButton jRadioButton_Proof7b;
+    private javax.swing.JRadioButton jRadioButton_Proof6a;
+    private javax.swing.JRadioButton jRadioButton_Proof6b;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane_Results;
     private javax.swing.JTextArea jTextArea_Description;
@@ -1129,7 +1080,6 @@ public class MainWindow extends javax.swing.JFrame {
     //Method that sets an incon to the jFrame 
     private void setIcon() {
         String icon_path = "terminus_xml_small.png";
-
         this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getClassLoader().getResource(icon_path)));
     }
 
@@ -1207,7 +1157,7 @@ public class MainWindow extends javax.swing.JFrame {
                 result = "Nenhuma função foi selecionada!";
                 break;
             case 1: //Model Check function
-                result = validatesModel("produto.xsd");
+                result = validatesModel(modelXsd);
                 break;
             case 2: //List Individual Tags function
                 break;

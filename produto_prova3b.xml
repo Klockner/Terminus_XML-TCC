@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <produto xmlns="http://NamespaceTest.com/produto"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://NamespaceTest.com/produto file:/C:/Users/Gabriel/Desktop/XML/produto.xsd">
+    xsi:schemaLocation="http://NamespaceTest.com/produto /home/klockner/UTFPR/Terminus_XML-TCC/produto_prova3.xsd">
     <produto-de-moda>
         <sku>1219213</sku>
         <nome>CARDIGAN CINZA COM BOLSOS FRONTAIS</nome>
@@ -14,6 +14,7 @@
         <valor-da-parcela></valor-da-parcela>
         <url>www.posthaus.com.br/moda/cardigan-cinza- com-bolsos-frontais_art121921_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto/moda-feminina/casacos-e- jaquetas/cardigan-cinza- com-bolsos-frontais_121921_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>1</quantidade-preenchimento>
         <preenchimento>
         	<cor>Cinza</cor>
             <textura></textura>
@@ -22,7 +23,6 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Casaco</categoria>
         <subcategoria>Cardigan</subcategoria>
@@ -39,6 +39,7 @@
         <valor-da-parcela></valor-da-parcela>
         <url>www.posthaus.com.br/moda/blusa-manga-longa-branca-estampada-frontal_art189530_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto/moda-feminina/blusas/blusa-manga-longa-branca-estampada-frontal_189530_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>1</quantidade-preenchimento>
         <preenchimento>
             <cor>Branco</cor>
             <textura></textura>
@@ -46,7 +47,6 @@
         <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <plus-size>Não</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>
         <subcategoria>Blusa Manga Longa</subcategoria>
@@ -63,13 +63,16 @@
         <valor-da-parcela>34.99</valor-da-parcela>
         <url>www.posthaus.com.br/moda/calca-jeans-escuro-cintura-alta_art120082_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto/moda-feminina/calcas/calca-jeans-escuro-cintura-alta_120082_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>1</quantidade-preenchimento>
         <preenchimento>
             <cor>Azul</cor>
             <textura></textura>
         </preenchimento>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <plus-size>Sim</plus-size>
+        <tamanho>G</tamanho>
+        <tamanho>GG</tamanho>
+        <tamanho>GGG</tamanho>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -86,6 +89,7 @@
         <valor-da-parcela></valor-da-parcela>
         <url>www.posthaus.com.br/moda/calca-flare-estampada_art186849_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto/moda-feminina/calcas-capri-e-legging/calca-flare-estampada_186849_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>1</quantidade-preenchimento>
         <preenchimento>
             <cor>Preto</cor>
             <textura></textura>
@@ -93,7 +97,6 @@
         <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <plus-size>Não</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Flare</subcategoria>
@@ -110,6 +113,7 @@
         <valor-da-parcela></valor-da-parcela>
         <url>www.posthaus.com.br/moda/blusa-manga- longa-estampa-etnica_art176382_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto/moda-feminina/blusas-manga- longa/blusa-manga- longa-estampa-etnica_176382_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>2</quantidade-preenchimento>
         <preenchimento>
             <cor>Verde</cor>
             <textura>Estampa Tribal</textura>
@@ -119,7 +123,6 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>
         <subcategoria>Blusa Manga Longa</subcategoria>
@@ -136,6 +139,7 @@
         <valor-da-parcela></valor-da-parcela>
         <url>www.posthaus.com.br/moda/vestido-estampa- catedral-plus-size_art176206_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto/moda-feminina/vestidos/vestido-estampa-catedral-plus-size_176206_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>1</quantidade-preenchimento>
         <preenchimento>
             <cor></cor>
             <textura>Estampa Catedral</textura>
@@ -143,7 +147,6 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Vestido</categoria>
         <subcategoria>Vestido Médio</subcategoria>
@@ -160,6 +163,7 @@
         <valor-da-parcela>26.66</valor-da-parcela>
         <url>www.posthaus.com.br/moda/calca-jeans-azul-masculina_art180901_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto/moda-masculina/calcas/calca-jeans-azul-masculina_180901_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>1</quantidade-preenchimento>
         <preenchimento>
             <cor>Azul</cor>
             <textura></textura>
@@ -168,7 +172,6 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Masculina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -185,6 +188,7 @@
         <valor-da-parcela>24.99</valor-da-parcela>
         <url>www.posthaus.com.br/moda/blusa-unissex-branco_art124619_0_0.html?mkt=PH3669</url>
         <url-imagem>http://img.ph2-jpg.posthaus.com.br/Web/posthaus/foto /blusas-manga-longa/blusa-unissex-branco_124619_600_1.jpg</url-imagem>
+        <quantidade-preenchimento>1</quantidade-preenchimento>
         <preenchimento>
             <cor>Branco</cor>
             <textura></textura>
@@ -194,7 +198,6 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
-        <plus-size>Sim</plus-size>
         <classificacao>Moda Masculina</classificacao>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>
