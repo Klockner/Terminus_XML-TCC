@@ -1152,6 +1152,7 @@ public class MainWindow extends javax.swing.JFrame {
                 result = validatesModel();
                 break;
             case 2: //List Individual Tags function
+                result = controlClass.listIndividualTags(jTextField_ModelFile.getText(), jTextField_IndividualID.getText());
                 break;
             case 3: //List Individual Hierarchy function
                 break;
