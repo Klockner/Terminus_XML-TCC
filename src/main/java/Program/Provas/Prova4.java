@@ -33,7 +33,7 @@ public class Prova4 {
             Node nNode = nodeList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                //Find the element 1868494
+                //Find the element 1246194
                 if (element.getElementsByTagName("sku").item(0).getTextContent().equals("1246194")) {
                     System.out.println("SKU: " + element.getElementsByTagName("sku").item(0).getTextContent());
                     System.out.println("Nome: " + element.getElementsByTagName("nome").item(0).getTextContent());
