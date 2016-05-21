@@ -2,6 +2,7 @@ package Program;
 
 //Esta classe aqui é para ser substituida pelo programa em XML que você fizer.
 
+import Program.Parser.Finder;
 import Program.Provas.Prova1;
 import Program.Provas.Prova2;
 import Program.Provas.Prova3;
@@ -22,10 +23,16 @@ public class ControlClass {
     private Prova5 prova5;
     private Prova6 prova6a;
     private Prova6 prova6b;
+    private Finder finder;
 
     //Constructor
     public ControlClass() {
-
+        
+    }
+    
+    public String listIndividualTags(String xmlFileName, String individualId) {
+        finder = new Finder(xmlFileName);
+        return finder.listIndividualTags(individualId);
     }
     
     //This method is responsible for apply the proofs and return the result string
