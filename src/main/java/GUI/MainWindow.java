@@ -1,11 +1,6 @@
 package GUI;
 
 import Program.ControlClass;
-import Program.Provas.Prova1;
-import Program.Provas.Prova2;
-import Program.Provas.Prova3;
-import Program.Provas.Prova4;
-import Program.Provas.Prova5;
 import Program.Util.OpenFile;
 import Program.Validation.Validates;
 import java.awt.Toolkit;
@@ -15,22 +10,6 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.w3c.dom.Document;
-/*
-GABRIEL, DELETAR DEPOIS DE LER
-Elemento                Descrição
-selectedFunction	VARIÁVEL INTEIRA QUE INDICA QUAL DAS FUNÇÕES ESTÁ ATIVADA. 
-ELA É MUDADA A CADA VEZ QUE ALGUM RADIOBUTTON É CLICADO. QUANDO SEU VALOR É ZERO, 
-NENHUMA FUNCIONALIDADE ESTÁ IMPLEMENTADA.
-
-jTextField_ModelFile	Como no seu caso são vários modelos XML e XSD que são 
-capturados então este campo serve para identificar o arquivo do modelo deve ser carregado.  
-
-Exemplo: “modelo.xml”. Você pode especificar no programa para que o programa 
-pegue esta string e abra o XSD da mesma. Exemplo “modelo.xsd”. Lembrando que 
-todos os arquivos devem estar na pasta “src/resources”. Você acessa os 
-arquivos com o seguinte comando: getClass().getClassLoader().getResource(“NOME DO ARQUIVO”)));
-*/
-
 
 //This class implements the application's main window
 public class MainWindow extends javax.swing.JFrame {
@@ -39,7 +18,7 @@ public class MainWindow extends javax.swing.JFrame {
     private int selectedFunction;
     private final ControlClass controlClass;
     private Document docXml;
-    private String modelXsd;
+    private String xsdFileName;
 
     //Constructor
     public MainWindow(ControlClass controlClass) {
@@ -840,8 +819,7 @@ public class MainWindow extends javax.swing.JFrame {
                 + "feminina,\n"
                 + "mas por asserção.");
         
-        Prova1 prova1a = new Prova1("produto_prova1a.xml");
-        String result = prova1a.init();
+        String result = controlClass.createProof("1a", this.jTextField_ModelFile.getText());
         jTextArea_Results.setText("Valores encontrados na Tag Classificacao onde a Tag Categoria = Vestido:\n\n");
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof1aActionPerformed
@@ -864,8 +842,7 @@ public class MainWindow extends javax.swing.JFrame {
                 + "vestido foi classificado\n"
                 + "como moda feminina.");
         
-        Prova1 prova1b = new Prova1("produto_prova1b.xml");
-        String result = prova1b.init();
+        String result = controlClass.createProof("1b", this.jTextField_ModelFile.getText());
         jTextArea_Results.setText("Valores encontrados na Tag Classificacao onde a Tag Categoria = Vestido:\n\n");
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof1bActionPerformed
@@ -889,15 +866,13 @@ public class MainWindow extends javax.swing.JFrame {
                 + "porque isto foi\n"
                 + "asserido.");
         
-        Prova2 prova2 = new Prova2("produto_prova2.xml");
-        String result = prova2.init();
+        String result = controlClass.createProof("2", this.jTextField_ModelFile.getText());
         jTextArea_Results.setText("Indivíduo identificado por 1200827 satisfaz as condições:\n\n");
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof2ActionPerformed
 
     private void jRadioButton_Proof3aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3aActionPerformed
         this.jTextField_ModelFile.setText("produto_prova3a.xml");
-        modelXsd = "produto_prova3.xsd";
         this.loadModel();
         this.jLabel_ProofTitle.setText("Inconsistência de Asserções");
         this.jRadioButton_ModelCheckActionPerformed(evt);
@@ -925,9 +900,8 @@ public class MainWindow extends javax.swing.JFrame {
                 + "de preenchimentos\n"
                 + "inconsistentes com\n"
                 + "o asserido.");
-        
-        Prova3 prova3 = new Prova3("produto_prova3b.xml");
-        String result = prova3.init();
+
+        String result = controlClass.createProof("3b", this.jTextField_ModelFile.getText());
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof3bActionPerformed
 
@@ -946,8 +920,7 @@ public class MainWindow extends javax.swing.JFrame {
                 + "indivíduo a partir\n"
                 + "de hierarquia.");
         
-        Prova4 prova4 = new Prova4("produto_prova4.xml");
-        String result = prova4.init();
+        String result = controlClass.createProof("4", this.jTextField_ModelFile.getText());
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof4ActionPerformed
 
@@ -969,14 +942,14 @@ public class MainWindow extends javax.swing.JFrame {
                 + "conceito se isto for\n"
                 + "asserido.");
         
-        Prova5 prova5 = new Prova5("produto_prova5.xml");
-        String result = prova5.init();
+        String result = controlClass.createProof("5", this.jTextField_ModelFile.getText());
         jTextArea_Results.setText("Indivíduos que satisfazem as restrições:\nCategoria = Calça\nPlusSize = Sim\n");
         jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof5ActionPerformed
 
     private void jRadioButton_Proof6aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6aActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_1.xml");
+        //Uses the same model than 1a
+        this.jTextField_ModelFile.setText("produto_prova1a.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Diminuição da Ambiguidade – Listar Indivíduos Tamanho L");
         this.jRadioButton_ListIndividualsByConstraintActionPerformed(evt);
@@ -991,10 +964,14 @@ public class MainWindow extends javax.swing.JFrame {
                 + "relações de \n"
                 + "equivalência do modelo\n"
                 + "não semântico.");
+
+        String result = controlClass.createProof("6a", this.jTextField_ModelFile.getText());
+        jTextArea_Results.setText("Indivíduos que satisfazem as restrições:\nCategoria = Blusa\nTamanho = L\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof6aActionPerformed
 
     private void jRadioButton_Proof6bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6bActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_1.xml");
+        this.jTextField_ModelFile.setText("produto_prova1a.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Diminuição da Ambiguidade – Listar Indivíduos Tamanho G");
         this.jRadioButton_ListIndividualsByConstraintActionPerformed(evt);
@@ -1002,12 +979,16 @@ public class MainWindow extends javax.swing.JFrame {
         this.jTextField_ConstraintTag1.setText("categoria");
         this.jTextField_ConstraintValue1.setText("blusa");
         this.jTextField_ConstraintTag2.setText("tamanho");
-        this.jTextField_ConstraintValue2.setText("l");
+        this.jTextField_ConstraintValue2.setText("g");
         this.jTextArea_Description.setText(
                 "Mostrar a falta de\n"
                 + "relações de \n"
                 + "equivalência do modelo\n"
                 + "não semântico.");
+        
+        String result = controlClass.createProof("6b", this.jTextField_ModelFile.getText());
+        jTextArea_Results.setText("Indivíduos que satisfazem as restrições:\nCategoria = Blusa\nTamanho = G\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof6bActionPerformed
 
     private void jCheckBox_ActivateProofsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_ActivateProofsActionPerformed
@@ -1168,7 +1149,7 @@ public class MainWindow extends javax.swing.JFrame {
                 result = "Nenhuma função foi selecionada!";
                 break;
             case 1: //Model Check function
-                result = validatesModel(modelXsd);
+                result = validatesModel();
                 break;
             case 2: //List Individual Tags function
                 break;
@@ -1184,9 +1165,30 @@ public class MainWindow extends javax.swing.JFrame {
         this.jTextArea_Results.setText(result);
     }
     
-    //Validates model and return the 
-    private String validatesModel(String xsdFileName) {
-        boolean isValid = Validates.validateModel(jTextField_ModelFile.getText(), xsdFileName);
+    //Validates model and return
+    private String validatesModel() {
+        String xmlFileName = jTextField_ModelFile.getText();
+        boolean isValid = false;
+        
+        if (xmlFileName.contains("produto_prova1")) {
+            xsdFileName = "produto_prova1.xsd";
+            isValid = Validates.validateModel(xmlFileName, xsdFileName);
+        } else if (xmlFileName.contains("produto_prova2")) {
+            xsdFileName = "produto_prova2.xsd";
+            isValid = Validates.validateModel(xmlFileName, xsdFileName);
+        } else if (xmlFileName.contains("produto_prova3")) {
+            xsdFileName = "produto_prova3.xsd";
+            isValid = Validates.validateModel(xmlFileName, xsdFileName);
+        } else if (xmlFileName.contains("produto_prova4")) {
+            xsdFileName = "produto_prova4.xsd";
+            isValid = Validates.validateModel(xmlFileName, xsdFileName);
+        } else if (xmlFileName.contains("produto_prova5")) {
+            xsdFileName = "produto_prova5.xsd";
+            isValid = Validates.validateModel(xmlFileName, xsdFileName);
+        } else {
+            isValid = false;
+        }
+        
         if (isValid) {
             return "Modelo válido!";
         } else {
