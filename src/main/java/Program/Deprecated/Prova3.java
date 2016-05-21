@@ -47,7 +47,6 @@ public class Prova3 {
                     System.out.println("Valor das parcelas: " + element.getElementsByTagName("valor-da-parcela").item(0).getTextContent());
                     System.out.println("URL: " + element.getElementsByTagName("url").item(0).getTextContent());
                     System.out.println("URL da imagem: " + element.getElementsByTagName("url-imagem").item(0).getTextContent());
-                    System.out.println("Quantidade preenchimento: " + element.getElementsByTagName("quantidade-preenchimento").item(0).getTextContent());
                     System.out.println("Preenchimento: ");
                     for (int countColor = 0; countColor < element.getElementsByTagName("cor").getLength(); countColor++) {
                         System.out.println("    Cor: " + element.getElementsByTagName("cor").item(countColor).getTextContent());
@@ -58,6 +57,7 @@ public class Prova3 {
                     for (int j = 0; j < element.getElementsByTagName("tamanho").getLength(); j++) {
                         System.out.println("Tamanho: " + element.getElementsByTagName("tamanho").item(j).getTextContent());
                     }
+                    System.out.println("PlusSize: " + element.getElementsByTagName("plus-size").item(0).getTextContent());
                     System.out.println("Classificacao: " + element.getElementsByTagName("classificacao").item(0).getTextContent());
                     System.out.println("Categoria: " + element.getElementsByTagName("categoria").item(0).getTextContent());
                     System.out.println("Subcategoria: " + element.getElementsByTagName("subcategoria").item(0).getTextContent());
@@ -73,7 +73,6 @@ public class Prova3 {
                     sb.append("\nNumero de parcelas: ").append(element.getElementsByTagName("numero-de-parcelas").item(0).getTextContent());
                     sb.append("\nURL: ").append(element.getElementsByTagName("url").item(0).getTextContent());
                     sb.append("\nURL da imagem: ").append(element.getElementsByTagName("url-imagem").item(0).getTextContent());
-                    sb.append("\nQuantidade preenchimento: ").append(element.getElementsByTagName("quantidade-preenchimento").item(0).getTextContent());
                     sb.append("\nPreenchimento: ");
                      for (int countColor = 0; countColor < element.getElementsByTagName("cor").getLength(); countColor++) {
                         sb.append("\n   Cor: ").append(element.getElementsByTagName("cor").item(countColor).getTextContent());
@@ -84,6 +83,7 @@ public class Prova3 {
                     for (int j = 0; j < element.getElementsByTagName("tamanho").getLength(); j++) {
                         sb.append("\nTamanho: ").append(element.getElementsByTagName("tamanho").item(j).getTextContent());
                     }
+                    sb.append("\nPlusSize: ").append(element.getElementsByTagName("plus-size").item(0).getTextContent());
                     sb.append("\nClassificacao: ").append(element.getElementsByTagName("classificacao").item(0).getTextContent());
                     sb.append("\nCategoria: ").append(element.getElementsByTagName("categoria").item(0).getTextContent());
                     sb.append("\nSubcategoria: ").append(element.getElementsByTagName("subcategoria").item(0).getTextContent());
