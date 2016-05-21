@@ -5,6 +5,7 @@
  */
 package Program.Provas;
 
+
 /**
  *
  * @author klockner
@@ -21,7 +22,7 @@ public class MainProvas {
 //        Prova2 prova2 = new Prova2("produtos-prova2.xml");
 //        prova2.init();
         System.out.println("--------------------------");
-        Prova3 prova3 = new Prova3("produto_moda_4.xml");
+        Prova3 prova3 = new Prova3("produtos_prova3b.xml");
         prova3.init();
         
     }

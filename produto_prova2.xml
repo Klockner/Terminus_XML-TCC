@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <produto xmlns="http://NamespaceTest.com/produto"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://NamespaceTest.com/produto file:/C:/Users/Gabriel/Desktop/XML/produto.xsd">
+    xsi:schemaLocation="http://NamespaceTest.com/produto /home/klockner/UTFPR/Terminus_XML-TCC/produto_prova2.xsd">
     <produto-de-moda>
         <sku>1219213</sku>
         <nome>CARDIGAN CINZA COM BOLSOS FRONTAIS</nome>
@@ -22,6 +22,7 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
+        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Casaco</categoria>
         <subcategoria>Cardigan</subcategoria>
@@ -45,6 +46,7 @@
         <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
+        <plus-size>Não</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>
         <subcategoria>Blusa Manga Longa</subcategoria>
@@ -67,6 +69,7 @@
         </preenchimento>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
+        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -90,6 +93,7 @@
         <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
+        <plus-size>Não</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Flare</subcategoria>
@@ -115,6 +119,7 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
+        <plus-size>Sim</plus-size>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>
         <subcategoria>Blusa Manga Longa</subcategoria>
@@ -138,7 +143,8 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
-        <classificacao>XXXX</classificacao>
+        <plus-size>Sim</plus-size>
+        <classificacao>Moda Feminina</classificacao>
         <categoria>Vestido</categoria>
         <subcategoria>Vestido Médio</subcategoria>
     </produto-de-moda>
@@ -162,6 +168,7 @@
         <tamanho>M</tamanho>
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
+        <plus-size>Sim</plus-size>
         <classificacao>Moda Masculina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -187,6 +194,7 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
+        <plus-size>Sim</plus-size>
         <classificacao>Moda Masculina</classificacao>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Blusa</categoria>

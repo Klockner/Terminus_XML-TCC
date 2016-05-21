@@ -9,7 +9,7 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup_Proofs">
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="buttonGroup_Proofs.add(jRadioButton_Proof1a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof1b);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof2);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof3a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof3b);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof4a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof4b);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof5);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof6);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof7a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof7b);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="buttonGroup_Proofs.add(jRadioButton_Proof1a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof1b);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof2);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof3a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof3b);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof3a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof3b);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof4);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof5);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof6a);&#xa;buttonGroup_Proofs.add(jRadioButton_Proof6b);"/>
       </AuxValues>
     </Component>
   </NonVisualComponents>
@@ -755,63 +755,65 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jRadioButton_Proof3b" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof3a" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof1a" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof1b" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jRadioButton_Proof2" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jRadioButton_Proof1a" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jRadioButton_Proof1b" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jRadioButton_Proof3b" pref="84" max="32767" attributes="0"/>
+                                          <Component id="jRadioButton_Proof3a" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jRadioButton_Proof4" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jRadioButton_Proof4b" pref="84" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof5" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof4a" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof6" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof7a" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jRadioButton_Proof7b" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="jRadioButton_Proof5" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jRadioButton_Proof6a" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jRadioButton_Proof6b" alignment="1" min="-2" pref="84" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="jCheckBox_ActivateProofs" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="14" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jCheckBox_ActivateProofs" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jRadioButton_Proof1a" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton_Proof1b" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="jCheckBox_ActivateProofs" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="7" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jRadioButton_Proof1a" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jRadioButton_Proof1b" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jRadioButton_Proof2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jRadioButton_Proof5" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jRadioButton_Proof6a" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jRadioButton_Proof6b" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jRadioButton_Proof4a" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jRadioButton_Proof3a" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jRadioButton_Proof4b" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton_Proof3b" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jRadioButton_Proof2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton_Proof5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jRadioButton_Proof3a" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton_Proof6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jRadioButton_Proof3b" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton_Proof7a" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jRadioButton_Proof7b" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton_Proof4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -878,28 +880,16 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof3bActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof4a">
+                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof4">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Trebuchet MS" size="11" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Prova 4-a"/>
+                    <Property name="text" type="java.lang.String" value="Prova 4"/>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof4aActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof4b">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Trebuchet MS" size="11" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Prova 4-b"/>
-                    <Property name="enabled" type="boolean" value="false"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof4bActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof4ActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof5">
@@ -914,40 +904,28 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof5ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof6">
+                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof6a">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Trebuchet MS" size="11" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Prova 6"/>
+                    <Property name="text" type="java.lang.String" value="Prova 6-a"/>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof6ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof6aActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof7a">
+                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof6b">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Trebuchet MS" size="11" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Prova 7-a"/>
+                    <Property name="text" type="java.lang.String" value="Prova6-b"/>
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof7aActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton_Proof7b">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Trebuchet MS" size="11" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Prova 7-b"/>
-                    <Property name="enabled" type="boolean" value="false"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof7bActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton_Proof6bActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBox_ActivateProofs">

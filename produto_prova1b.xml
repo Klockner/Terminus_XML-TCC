@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <produto xmlns="http://NamespaceTest.com/produto"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://NamespaceTest.com/produto file:/C:/Users/Gabriel/Desktop/XML/produto.xsd">
+    xsi:schemaLocation="http://NamespaceTest.com/produto /home/klockner/UTFPR/Terminus_XML-TCC/produto_prova1.xsd">
     <produto-de-moda>
         <sku>1219213</sku>
         <nome>CARDIGAN CINZA COM BOLSOS FRONTAIS</nome>
@@ -67,9 +67,6 @@
         </preenchimento>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
-        <tamanho>G</tamanho>
-        <tamanho>GG</tamanho>
-        <tamanho>GGG</tamanho>
         <classificacao>Moda Feminina</classificacao>
         <categoria>Calça</categoria>
         <subcategoria>Calça Jeans</subcategoria>
@@ -141,7 +138,7 @@
         <tamanho>G</tamanho>
         <tamanho>GG</tamanho>
         <tamanho>GGG</tamanho>
-        <classificacao>Moda Feminina</classificacao>
+        <classificacao>XXXX</classificacao>
         <categoria>Vestido</categoria>
         <subcategoria>Vestido Médio</subcategoria>
     </produto-de-moda>
