@@ -6,6 +6,7 @@ import Program.Provas.Prova2;
 import Program.Provas.Prova3;
 import Program.Provas.Prova4;
 import Program.Provas.Prova5;
+import Program.Provas.Prova6;
 import Program.Util.OpenFile;
 import Program.Validation.Validates;
 import java.awt.Toolkit;
@@ -976,7 +977,8 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton_Proof5ActionPerformed
 
     private void jRadioButton_Proof6aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6aActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_1.xml");
+        //Uses the same model than 1a
+        this.jTextField_ModelFile.setText("produto_prova1a.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Diminuição da Ambiguidade – Listar Indivíduos Tamanho L");
         this.jRadioButton_ListIndividualsByConstraintActionPerformed(evt);
@@ -991,10 +993,15 @@ public class MainWindow extends javax.swing.JFrame {
                 + "relações de \n"
                 + "equivalência do modelo\n"
                 + "não semântico.");
+        
+        Prova6 prova6 = new Prova6("produto_prova1a.xml");
+        String result = prova6.init("L");
+        jTextArea_Results.setText("Indivíduos que satisfazem as restrições:\nCategoria = Blusa\nTamanho = L\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof6aActionPerformed
 
     private void jRadioButton_Proof6bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof6bActionPerformed
-        this.jTextField_ModelFile.setText("produto_moda_1.xml");
+        this.jTextField_ModelFile.setText("produto_prova1a.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Diminuição da Ambiguidade – Listar Indivíduos Tamanho G");
         this.jRadioButton_ListIndividualsByConstraintActionPerformed(evt);
@@ -1002,12 +1009,17 @@ public class MainWindow extends javax.swing.JFrame {
         this.jTextField_ConstraintTag1.setText("categoria");
         this.jTextField_ConstraintValue1.setText("blusa");
         this.jTextField_ConstraintTag2.setText("tamanho");
-        this.jTextField_ConstraintValue2.setText("l");
+        this.jTextField_ConstraintValue2.setText("g");
         this.jTextArea_Description.setText(
                 "Mostrar a falta de\n"
                 + "relações de \n"
                 + "equivalência do modelo\n"
                 + "não semântico.");
+        
+        Prova6 prova6 = new Prova6("produto_prova1a.xml");
+        String result = prova6.init("G");
+        jTextArea_Results.setText("Indivíduos que satisfazem as restrições:\nCategoria = Blusa\nTamanho = G\n");
+        jTextArea_Results.append(result);
     }//GEN-LAST:event_jRadioButton_Proof6bActionPerformed
 
     private void jCheckBox_ActivateProofsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_ActivateProofsActionPerformed
