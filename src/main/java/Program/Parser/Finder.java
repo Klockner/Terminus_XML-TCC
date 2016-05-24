@@ -6,17 +6,10 @@
 package Program.Parser;
 
 import Program.Util.OpenFile;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-import javax.xml.stream.XMLStreamException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.helpers.DefaultHandler;
 
 /**
  *
@@ -32,94 +25,86 @@ public class Finder {
         doc = openFile.createDoc(xmlFileName);
     }
     
+//    public void testeDom() {
+//        Node nodeRoot = doc.getFirstChild();
+//        NodeList nodeList = nodeRoot.getChildNodes();
+//        Node node1, node2, node3;
+//
+//        for (int i=0; i < nodeList.getLength(); i++) {
+//            node1 = nodeList.item(i);
+//            
+//            if(node1.getNodeType()==Node.ELEMENT_NODE) {
+//                NodeList nodeList2 = node1.getChildNodes();
+//                for(int i2=0; i2<nodeList2.getLength(); i2++) {
+//                    node2 = nodeList2.item(i2);
+//                    
+//                    if (node2.getNodeType() == Node.ELEMENT_NODE) {
+//                        //Se for um elemento pai
+//                        if (node2.getChildNodes().getLength() > 1) {
+//                            System.out.println("");
+//                            System.out.println(node2.getNodeName() + ": ");
+//                            NodeList nodeList3 = node2.getChildNodes();
+//                            for(int i3=0; i3<nodeList3.getLength(); i3++) {
+//                                node3 = nodeList3.item(i3);
+//                                //Se o conteudo (texto, valor) da tag for diferente de null, então imprime
+//                                if (node3.getFirstChild() != null) {
+//                                    System.out.println("    " + node3.getNodeName() + ": " + node3.getTextContent());
+//                                }
+//                            }
+//                        } else {
+//                            //Se o conteudo (texto, valor) da tag for diferente de null, então imprime
+//                            if (node2.getFirstChild() != null) {
+//                                System.out.println("");
+//                                System.out.println(node2.getNodeName() + ": " + node2.getTextContent());
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
     public void testeDom() {
         Node nodeRoot = doc.getFirstChild();
         NodeList nodeList = nodeRoot.getChildNodes();
-        Node an,an2;
+        Node node1;
 
+        //Get the tag reference of the product
+        node1 = nodeList.item(1);
+        
+        //Call the method for parse the xml recursively
+        recursiveParse(nodeList, node1);
+    }
+    
+    public void recursiveParse(NodeList nodeList, Node nodeNewProduct) {
+        Node node;
+        
         for (int i=0; i < nodeList.getLength(); i++) {
-            an = nodeList.item(i);
+            node = nodeList.item(i);
             
-            if(an.getNodeType()==Node.ELEMENT_NODE) {
-                NodeList nodeList2 = an.getChildNodes();
-                for(int i2=0; i2<nodeList2.getLength(); i2++) {
-                    an2 = nodeList2.item(i2);
-                    // DEBUG PRINTS
-                    if (an2.getNodeType() == Node.ELEMENT_NODE) {
-                        System.out.println(an2.getNodeName() + ": " + an2.getTextContent());
+            //Começa novo elemento, novo produto
+            if (nodeNewProduct.getNodeName().equals(node.getNodeName())) {
+                System.out.println("NOVO PRODUTO");
+            }
+            
+            if(node.getNodeType() == Node.ELEMENT_NODE) {
+                //If the element has children
+                if (node.getChildNodes().getLength() > 1) {
+                    System.out.println("");
+                    System.out.println(node.getNodeName() + ": ");
+                    recursiveParse(node.getChildNodes(), nodeNewProduct);
+                } else {
+                    //If does not have children and have value
+                    if (node.getFirstChild() != null) {
                         System.out.println("");
+                        System.out.println(node.getNodeName() + ": " + node.getTextContent());
                     }
                 }
             }
-        }
+        }    
     }
-    
-    
-    public void novoSax(String xmlFileName) {
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        try {
-
-            InputStream    xmlInput  = new FileInputStream(xmlFileName);
-            SAXParser      saxParser = factory.newSAXParser();
-
-            DefaultHandler handler   = new SaxHandler();
-            saxParser.parse(xmlInput, handler);
-
-        } catch (Throwable err) {
-            err.printStackTrace ();
-        }
-    }   
-    
-    public void teste(String xmlFileName) throws XMLStreamException, FileNotFoundException {
-        //pega o node root que é produto
-        String root = doc.getDocumentElement().getNodeName();
-        System.out.println(root);
-        Node nodeRoot = doc.getDocumentElement();
-        String firstChild = nodeRoot.getFirstChild().getNodeName();
-        String lastChild = nodeRoot.getLastChild().getNodeName();
-        System.out.println(firstChild);
-        System.out.println(lastChild);
-        
-        NodeList nodeList = doc.getElementsByTagName("*");
-        for (int i=0; i < nodeList.getLength(); i++) 
-        {
-//            if (nodeList.item(i).getTextContent().equalsIgnoreCase("1868494")) {
-                // Get element
-                String teste = getText(nodeList.item(i));
-                System.out.println(teste);
-//            }
-        }
-    }
-    
-    public String getText(Node node) {
-        StringBuilder result = new StringBuilder();
-        if (! node.hasChildNodes()) return "";
-
-        NodeList list = node.getChildNodes();
-        for (int i=0; i < list.getLength(); i++) {
-            Node subnode = list.item(i);
-            switch (subnode.getNodeType()) {
-                case Node.ELEMENT_NODE:
-                    result.append("TAG: " + subnode.getTextContent());
-                case Node.TEXT_NODE:
-                    result.append(subnode.getNodeValue());
-                    break;
-                case Node.CDATA_SECTION_NODE:
-                    result.append(subnode.getNodeValue());
-                    break;
-                case Node.ENTITY_REFERENCE_NODE:
-                    // Recurse into the subtree for text
-                    // (and ignore comments)
-                    result.append(getText(subnode));
-                    break;
-                default:
-                    break;
-            }
-        }
-        return result.toString();
-    }
-
-    
+            
+            
     public String listIndividualTags(String individualId) {
         StringBuilder sb = new StringBuilder();
         NodeList nodeList = doc.getElementsByTagName("produto-de-moda");
