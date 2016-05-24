@@ -1187,7 +1187,9 @@ public class MainWindow extends javax.swing.JFrame {
             xsdFileName = "produto_prova5.xsd";
             isValid = Validates.validateModel(xmlFileName, xsdFileName);
         } else {
-            isValid = false;
+            String[] xsdFileSplit = xmlFileName.split(".xml");
+            xsdFileName = xsdFileSplit[0].concat(".xsd");
+            isValid = Validates.validateModel(xmlFileName, xsdFileName);
         }
         
         if (isValid) {
