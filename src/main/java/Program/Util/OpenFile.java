@@ -28,7 +28,7 @@ public class OpenFile {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(xmlFile);
             //optional, but recommended
-            doc.getDocumentElement().normalize();
+//            doc.getDocumentElement().normalize();
             return doc;
         } catch (IOException | ParserConfigurationException | SAXException e) {
             System.out.println("Erro ao abrir o documento xml: " + e.getMessage());
