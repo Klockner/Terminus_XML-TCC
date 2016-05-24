@@ -95,6 +95,7 @@ public class Finder {
                     recursiveParse(node.getChildNodes(), nodeNewProduct);
                 } else {
                     //If does not have children and have value
+                    //it is like 1 child, but it represents the value
                     if (node.getFirstChild() != null) {
                         System.out.println("");
                         System.out.println(node.getNodeName() + ": " + node.getTextContent());
