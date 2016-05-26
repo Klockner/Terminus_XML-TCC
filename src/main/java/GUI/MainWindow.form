@@ -498,6 +498,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jTextField_ConstraintValue2" max="32767" attributes="0"/>
                               </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="jLabel_RequiredTagValue1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jTextField_IndividualIdTag" min="-2" pref="80" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -509,6 +514,8 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel_IndividualID" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField_IndividualID" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_RequiredTagValue1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField_IndividualIdTag" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -529,7 +536,7 @@
                               <Component id="jTextField_TargetTag" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel_TargetTag1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="89" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -609,6 +616,19 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField_TargetTag">
+                  <Properties>
+                    <Property name="editable" type="boolean" value="false"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel_RequiredTagValue1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Trebuchet MS" size="11" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Tag:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField_IndividualIdTag">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
                   </Properties>

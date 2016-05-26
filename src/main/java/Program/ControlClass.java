@@ -30,9 +30,14 @@ public class ControlClass {
         
     }
     
-    public String listIndividualTags(String xmlFileName, String individualId) {
+    public String listIndividualTags(String xmlFileName, String tagId, String idValue) {
         finder = new Finder(xmlFileName);
-        return finder.listIndividualTags(individualId);
+        return finder.listIndividualTags(tagId, idValue);
+    }
+    
+    public String listIndividualHierarchy(String xmlFileName, String tagId, String idValue) {
+        finder = new Finder(xmlFileName);
+        return finder.listIndividualHierarchy(tagId, idValue);
     }
     
     //This method is responsible for apply the proofs and return the result string

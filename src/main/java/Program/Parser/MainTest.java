@@ -6,8 +6,6 @@
 package Program.Parser;
 
 import java.io.FileNotFoundException;
-import java.util.List;
-import java.util.Map;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.xpath.XPathExpressionException;
 
@@ -20,6 +18,7 @@ public class MainTest {
     public static void main(String[] args) throws XMLStreamException, FileNotFoundException, XPathExpressionException {
         Finder finder = new Finder("produto_prova1a.xml");
 //        finder.novoSax("produto_prova1a.xml");
-        finder.testeDom();
+//        finder.testeDom();
+        finder.listIndividualHierarchy("SKU", "1763822");
     }
 }
