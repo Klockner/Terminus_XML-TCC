@@ -74,6 +74,8 @@ public class MainWindow extends javax.swing.JFrame {
         jTextField_IndividualID = new javax.swing.JTextField();
         jLabel_TargetTag1 = new javax.swing.JLabel();
         jTextField_TargetTag = new javax.swing.JTextField();
+        jLabel_RequiredTagValue1 = new javax.swing.JLabel();
+        jTextField_IndividualIdTag = new javax.swing.JTextField();
         jPanel_Description = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea_Description = new javax.swing.JTextArea();
@@ -338,6 +340,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         jTextField_TargetTag.setEditable(false);
 
+        jLabel_RequiredTagValue1.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
+        jLabel_RequiredTagValue1.setText("Tag:");
+
+        jTextField_IndividualIdTag.setEditable(false);
+
         javax.swing.GroupLayout jPanel_ParametersLayout = new javax.swing.GroupLayout(jPanel_Parameters);
         jPanel_Parameters.setLayout(jPanel_ParametersLayout);
         jPanel_ParametersLayout.setHorizontalGroup(
@@ -364,7 +371,11 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(jPanel_ParametersLayout.createSequentialGroup()
                         .addComponent(jLabel_TargetTagValue)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField_ConstraintValue2)))
+                        .addComponent(jTextField_ConstraintValue2))
+                    .addGroup(jPanel_ParametersLayout.createSequentialGroup()
+                        .addComponent(jLabel_RequiredTagValue1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField_IndividualIdTag, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_ParametersLayout.setVerticalGroup(
@@ -372,7 +383,9 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(jPanel_ParametersLayout.createSequentialGroup()
                 .addGroup(jPanel_ParametersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_IndividualID)
-                    .addComponent(jTextField_IndividualID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_IndividualID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_RequiredTagValue1)
+                    .addComponent(jTextField_IndividualIdTag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel_ParametersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_RequiredTag)
@@ -389,7 +402,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(jPanel_ParametersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField_TargetTag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_TargetTag1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         jPanel_Description.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Descrição", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Trebuchet MS", 0, 11), new java.awt.Color(153, 153, 153))); // NOI18N
@@ -714,6 +727,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.changeField(jTextField_ConstraintValue2, false, "");
         this.changeField(jTextField_TargetTag, false, "");
         this.changeField(jTextField_IndividualID, false, "");
+        this.changeField(jTextField_IndividualIdTag, false, "");
         this.selectedFunction = 1; //Set the function to 1
         this.jTextArea_Description.setForeground(new java.awt.Color(0, 0, 0));
         this.jTextArea_Description.setText(
@@ -729,6 +743,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.changeField(jTextField_ConstraintValue2, true, null);
         this.changeField(jTextField_TargetTag, false, "");
         this.changeField(jTextField_IndividualID, true, null);
+        this.changeField(jTextField_IndividualIdTag, true, null);
         this.selectedFunction = 5; //Set the function to 5
         this.jTextArea_Description.setForeground(new java.awt.Color(0, 0, 0));
         this.jTextArea_Description.setText(
@@ -745,6 +760,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.changeField(jTextField_ConstraintValue2, true, null);
         this.changeField(jTextField_TargetTag, true, null);
         this.changeField(jTextField_IndividualID, false, "");
+        this.changeField(jTextField_IndividualIdTag, false, "");
         this.selectedFunction = 6; //Set the function to 6
         this.jTextArea_Description.setForeground(new java.awt.Color(0, 0, 0));
         this.jTextArea_Description.setText(
@@ -762,6 +778,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.changeField(jTextField_ConstraintValue2, false, "");
         this.changeField(jTextField_TargetTag, false, "");
         this.changeField(jTextField_IndividualID, true, null);
+        this.changeField(jTextField_IndividualIdTag, true, null);
         this.selectedFunction = 2; //Set the function to 2
         this.jTextArea_Description.setForeground(new java.awt.Color(0, 0, 0));
         this.jTextArea_Description.setText(
@@ -777,6 +794,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.changeField(jTextField_ConstraintValue2, true, null);
         this.changeField(jTextField_TargetTag, false, "");
         this.changeField(jTextField_IndividualID, false, "");
+        this.changeField(jTextField_IndividualIdTag, false, "");
         this.selectedFunction = 4; //Set the function to 4
         this.jTextArea_Description.setForeground(new java.awt.Color(0, 0, 0));
         this.jTextArea_Description.setText(
@@ -793,6 +811,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.changeField(jTextField_ConstraintValue2, false, "");
         this.changeField(jTextField_TargetTag, false, "");
         this.changeField(jTextField_IndividualID, true, null);
+        this.changeField(jTextField_IndividualIdTag, true, null);
         this.selectedFunction = 3; //Set the function to 3
         this.jTextArea_Description.setForeground(new java.awt.Color(0, 0, 0));
         this.jTextArea_Description.setText(
@@ -1024,6 +1043,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_ProofTitle;
     private javax.swing.JLabel jLabel_RequiredTag;
     private javax.swing.JLabel jLabel_RequiredTagValue;
+    private javax.swing.JLabel jLabel_RequiredTagValue1;
     private javax.swing.JLabel jLabel_TargetTag;
     private javax.swing.JLabel jLabel_TargetTag1;
     private javax.swing.JLabel jLabel_TargetTagValue;
@@ -1065,6 +1085,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_ConstraintValue1;
     private javax.swing.JTextField jTextField_ConstraintValue2;
     private javax.swing.JTextField jTextField_IndividualID;
+    private javax.swing.JTextField jTextField_IndividualIdTag;
     private javax.swing.JTextField jTextField_ModelFile;
     private javax.swing.JTextField jTextField_TargetTag;
     // End of variables declaration//GEN-END:variables
@@ -1152,9 +1173,10 @@ public class MainWindow extends javax.swing.JFrame {
                 result = validatesModel();
                 break;
             case 2: //List Individual Tags function
-                result = controlClass.listIndividualTags(jTextField_ModelFile.getText(), jTextField_IndividualID.getText());
+                result = controlClass.listIndividualTags(jTextField_ModelFile.getText(), jTextField_IndividualIdTag.getText(), jTextField_IndividualID.getText());
                 break;
             case 3: //List Individual Hierarchy function
+                result = controlClass.listIndividualHierarchy(jTextField_ModelFile.getText(), jTextField_IndividualIdTag.getText(), jTextField_IndividualID.getText());
                 break;
             case 4: //List Individuals By Constraint function
                 break;
