@@ -35,6 +35,8 @@ public class Proof4 {
                 Element element = (Element) nNode;
                 //Find the element 1246194
                 if (element.getElementsByTagName("sku").item(0).getTextContent().equals("1246194")) {
+                    System.out.println(nNode.getParentNode().getNodeName());
+                    System.out.println(nNode.getNodeName());
                     System.out.println("SKU: " + element.getElementsByTagName("sku").item(0).getTextContent());
                     System.out.println("Nome: " + element.getElementsByTagName("nome").item(0).getTextContent());
                     System.out.println("Descrição: " + element.getElementsByTagName("descricao").item(0).getTextContent());
@@ -63,33 +65,34 @@ public class Proof4 {
                     System.out.println("Categoria: " + element.getElementsByTagName("categoria").item(0).getTextContent());
                     System.out.println("Subcategoria: " + element.getElementsByTagName("subcategoria").item(0).getTextContent());
                     
-                    
-                    sb.append("SKU: ").append(element.getElementsByTagName("sku").item(0).getTextContent());
-                    sb.append("\nNome: ").append(element.getElementsByTagName("nome").item(0).getTextContent());
-                    sb.append("\nDescrição: ").append(element.getElementsByTagName("descricao").item(0).getTextContent());
-                    sb.append("\nMarca: ").append(element.getElementsByTagName("marca").item(0).getTextContent());
-                    sb.append("\nLoja: ").append(element.getElementsByTagName("loja").item(0).getTextContent());
-                    sb.append("\nPreco: ").append(element.getElementsByTagName("preco").item(0).getTextContent());
-                    sb.append("\nPreco promocao: ").append(element.getElementsByTagName("preco-promocao").item(0).getTextContent());
-                    sb.append("\nNumero de parcelas: ").append(element.getElementsByTagName("numero-de-parcelas").item(0).getTextContent());
-                    sb.append("\nURL: ").append(element.getElementsByTagName("url").item(0).getTextContent());
-                    sb.append("\nURL da imagem: ").append(element.getElementsByTagName("url-imagem").item(0).getTextContent());
-                    sb.append("\nPreenchimento: ");
+                    sb.append(nNode.getParentNode().getNodeName()).append(":");
+                    sb.append("\n  ").append(nNode.getNodeName()).append(":");
+                    sb.append("\n    SKU: ").append(element.getElementsByTagName("sku").item(0).getTextContent());
+                    sb.append("\n    Nome: ").append(element.getElementsByTagName("nome").item(0).getTextContent());
+                    sb.append("\n    Descrição: ").append(element.getElementsByTagName("descricao").item(0).getTextContent());
+                    sb.append("\n    Marca: ").append(element.getElementsByTagName("marca").item(0).getTextContent());
+                    sb.append("\n    Loja: ").append(element.getElementsByTagName("loja").item(0).getTextContent());
+                    sb.append("\n    Preco: ").append(element.getElementsByTagName("preco").item(0).getTextContent());
+                    sb.append("\n    Preco promocao: ").append(element.getElementsByTagName("preco-promocao").item(0).getTextContent());
+                    sb.append("\n    Numero de parcelas: ").append(element.getElementsByTagName("numero-de-parcelas").item(0).getTextContent());
+                    sb.append("\n    URL: ").append(element.getElementsByTagName("url").item(0).getTextContent());
+                    sb.append("\n    URL da imagem: ").append(element.getElementsByTagName("url-imagem").item(0).getTextContent());
+                    sb.append("\n    Preenchimento: ");
                      for (int countColor = 0; countColor < element.getElementsByTagName("cor").getLength(); countColor++) {
-                        sb.append("\n   Cor: ").append(element.getElementsByTagName("cor").item(countColor).getTextContent());
+                        sb.append("\n     Cor: ").append(element.getElementsByTagName("cor").item(countColor).getTextContent());
                     }
                     for (int countTexture = 0; countTexture < element.getElementsByTagName("textura").getLength(); countTexture++) {
-                        sb.append("\n   Textura: ").append(element.getElementsByTagName("textura").item(countTexture).getTextContent());
+                        sb.append("\n     Textura: ").append(element.getElementsByTagName("textura").item(countTexture).getTextContent());
                     }
                     for (int j = 0; j < element.getElementsByTagName("tamanho").getLength(); j++) {
-                        sb.append("\nTamanho: ").append(element.getElementsByTagName("tamanho").item(j).getTextContent());
+                        sb.append("\n    Tamanho: ").append(element.getElementsByTagName("tamanho").item(j).getTextContent());
                     }
                     for (int countClassification = 0; countClassification < element.getElementsByTagName("classificacao").getLength(); countClassification++) {
-                        sb.append("\nClassificação: ").append(element.getElementsByTagName("classificacao").item(countClassification).getTextContent());
+                        sb.append("\n    Classificação: ").append(element.getElementsByTagName("classificacao").item(countClassification).getTextContent());
                     }
-                    sb.append("\nUnissex: ").append(element.getElementsByTagName("unissex").item(0).getTextContent());
-                    sb.append("\nCategoria: ").append(element.getElementsByTagName("categoria").item(0).getTextContent());
-                    sb.append("\nSubcategoria: ").append(element.getElementsByTagName("subcategoria").item(0).getTextContent());
+                    sb.append("\n    Unissex: ").append(element.getElementsByTagName("unissex").item(0).getTextContent());
+                    sb.append("\n    Categoria: ").append(element.getElementsByTagName("categoria").item(0).getTextContent());
+                    sb.append("\n    Subcategoria: ").append(element.getElementsByTagName("subcategoria").item(0).getTextContent());
                 }
             }
         }

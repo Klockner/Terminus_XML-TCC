@@ -117,7 +117,7 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup_Proofs.add(jRadioButton_Proof6b);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("TERMINUS - XML");
+        setTitle("OWL API - TEST WINDOW");
         setName("janelaPrograma"); // NOI18N
 
         jLabel_Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -921,7 +921,7 @@ public class MainWindow extends javax.swing.JFrame {
                 + "o asserido.");
 
         String result = controlClass.createProof("3b", this.jTextField_ModelFile.getText());
-        jTextArea_Results.append(result);
+        jTextArea_Results.setText(result);
     }//GEN-LAST:event_jRadioButton_Proof3bActionPerformed
 
     private void jRadioButton_Proof4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof4ActionPerformed
@@ -940,7 +940,7 @@ public class MainWindow extends javax.swing.JFrame {
                 + "de hierarquia.");
         
         String result = controlClass.createProof("4", this.jTextField_ModelFile.getText());
-        jTextArea_Results.append(result);
+        jTextArea_Results.setText(result);
     }//GEN-LAST:event_jRadioButton_Proof4ActionPerformed
 
     private void jRadioButton_Proof5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof5ActionPerformed
