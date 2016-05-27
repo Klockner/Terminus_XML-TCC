@@ -16,9 +16,10 @@ import javax.xml.xpath.XPathExpressionException;
 public class MainTest {
  
     public static void main(String[] args) throws XMLStreamException, FileNotFoundException, XPathExpressionException {
-        Finder finder = new Finder("produto_prova1a.xml");
+        Finder finder = new Finder("produto_prova5.xml");
 //        finder.novoSax("produto_prova1a.xml");
 //        finder.testeDom();
-        finder.listIndividualHierarchy("SKU", "1763822");
+//        finder.listIndividualHierarchy("SKU", "1763822");
+        finder.listIndividualsByRestriction("categoria", "plus-size", "calça", "sim");
     }
 }

@@ -1179,6 +1179,9 @@ public class MainWindow extends javax.swing.JFrame {
                 result = controlClass.listIndividualHierarchy(jTextField_ModelFile.getText(), jTextField_IndividualIdTag.getText(), jTextField_IndividualID.getText());
                 break;
             case 4: //List Individuals By Constraint function
+                result = controlClass.listIndividualsByRestriction(jTextField_ModelFile.getText(),
+                        jTextField_ConstraintTag1.getText(), jTextField_ConstraintTag2.getText(),
+                        jTextField_ConstraintValue1.getText(), jTextField_ConstraintValue2.getText());
                 break;
             case 5: //Individual Satisfies Constraint function
                 break;

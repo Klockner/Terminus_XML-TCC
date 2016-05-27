@@ -30,6 +30,12 @@ public class ControlClass {
         
     }
     
+    public String listIndividualsByRestriction(String xmlFileName, String tagRestriction1, String tagRestriction2,
+            String tagRestrictionValue1, String tagRestrictionValue2) {
+        finder = new Finder(xmlFileName);
+        return finder.listIndividualsByRestriction(tagRestriction1, tagRestriction2, tagRestrictionValue1, tagRestrictionValue2);
+    }
+    
     public String listIndividualTags(String xmlFileName, String tagId, String idValue) {
         finder = new Finder(xmlFileName);
         return finder.listIndividualTags(tagId, idValue);
