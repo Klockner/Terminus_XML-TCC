@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Program.Provas;
+package Program.Proofs;
 
 import Program.Util.OpenFile;
 import org.w3c.dom.Document;
@@ -14,14 +14,14 @@ import org.w3c.dom.NodeList;
 /**
  *
  * @author klockner
- * Implements Prova2
+ Implements Proof2
  */
-public class Prova2 {
+public class Proof2 {
     private final OpenFile openFile;
     private final Document doc;
     
     //Constructor receive the doc
-    public Prova2(String xmlFileName) {
+    public Proof2(String xmlFileName) {
         openFile = new OpenFile();
         doc = openFile.createDoc(xmlFileName);
     }

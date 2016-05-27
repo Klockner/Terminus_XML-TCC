@@ -1190,6 +1190,10 @@ public class MainWindow extends javax.swing.JFrame {
                         jTextField_ConstraintTag2.getText(), jTextField_ConstraintValue2.getText());
                 break;
             case 6: //List Tag Values function
+                result = controlClass.listTagValues(jTextField_ModelFile.getText(),
+                        jTextField_ConstraintTag1.getText(), jTextField_ConstraintValue1.getText(),
+                        jTextField_ConstraintTag2.getText(), jTextField_ConstraintValue2.getText(),
+                        jTextField_TargetTag.getText());
                 break;
         }
         this.jTextArea_Results.setText(result);

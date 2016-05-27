@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Program.Provas;
+package Program.Proofs;
 
 import Program.Util.OpenFile;
 import org.w3c.dom.Document;
@@ -15,12 +15,12 @@ import org.w3c.dom.NodeList;
  *
  * @author klockner
  */
-public class Prova3 {
+public class Proof4 {
     private final OpenFile openFile;
     private final Document doc;
     
     //Constructor receive the doc
-    public Prova3(String xmlFileName) {
+    public Proof4(String xmlFileName) {
         openFile = new OpenFile();
         doc = openFile.createDoc(xmlFileName);
     }
@@ -33,8 +33,8 @@ public class Prova3 {
             Node nNode = nodeList.item(i);
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nNode;
-                //Find the element 1763822
-                if (element.getElementsByTagName("sku").item(0).getTextContent().equals("1763822")) {
+                //Find the element 1246194
+                if (element.getElementsByTagName("sku").item(0).getTextContent().equals("1246194")) {
                     System.out.println("SKU: " + element.getElementsByTagName("sku").item(0).getTextContent());
                     System.out.println("Nome: " + element.getElementsByTagName("nome").item(0).getTextContent());
                     System.out.println("Descrição: " + element.getElementsByTagName("descricao").item(0).getTextContent());
@@ -46,7 +46,6 @@ public class Prova3 {
                     System.out.println("Valor das parcelas: " + element.getElementsByTagName("valor-da-parcela").item(0).getTextContent());
                     System.out.println("URL: " + element.getElementsByTagName("url").item(0).getTextContent());
                     System.out.println("URL da imagem: " + element.getElementsByTagName("url-imagem").item(0).getTextContent());
-                    System.out.println("Quantidade preenchimento: " + element.getElementsByTagName("quantidade-preenchimento").item(0).getTextContent());
                     System.out.println("Preenchimento: ");
                     for (int countColor = 0; countColor < element.getElementsByTagName("cor").getLength(); countColor++) {
                         System.out.println("    Cor: " + element.getElementsByTagName("cor").item(countColor).getTextContent());
@@ -58,8 +57,9 @@ public class Prova3 {
                         System.out.println("Tamanho: " + element.getElementsByTagName("tamanho").item(j).getTextContent());
                     }
                     for (int countClassification = 0; countClassification < element.getElementsByTagName("classificacao").getLength(); countClassification++) {
-                        System.out.println("Classificação: " + element.getElementsByTagName("classificacao").item(0).getTextContent());
+                        System.out.println("Classificação: " + element.getElementsByTagName("classificacao").item(countClassification).getTextContent());
                     }
+                    System.out.println("Unissex: " + element.getElementsByTagName("unissex").item(0).getTextContent());
                     System.out.println("Categoria: " + element.getElementsByTagName("categoria").item(0).getTextContent());
                     System.out.println("Subcategoria: " + element.getElementsByTagName("subcategoria").item(0).getTextContent());
                     
@@ -74,7 +74,6 @@ public class Prova3 {
                     sb.append("\nNumero de parcelas: ").append(element.getElementsByTagName("numero-de-parcelas").item(0).getTextContent());
                     sb.append("\nURL: ").append(element.getElementsByTagName("url").item(0).getTextContent());
                     sb.append("\nURL da imagem: ").append(element.getElementsByTagName("url-imagem").item(0).getTextContent());
-                    sb.append("\nQuantidade preenchimento: ").append(element.getElementsByTagName("quantidade-preenchimento").item(0).getTextContent());
                     sb.append("\nPreenchimento: ");
                      for (int countColor = 0; countColor < element.getElementsByTagName("cor").getLength(); countColor++) {
                         sb.append("\n   Cor: ").append(element.getElementsByTagName("cor").item(countColor).getTextContent());
@@ -85,7 +84,10 @@ public class Prova3 {
                     for (int j = 0; j < element.getElementsByTagName("tamanho").getLength(); j++) {
                         sb.append("\nTamanho: ").append(element.getElementsByTagName("tamanho").item(j).getTextContent());
                     }
-                    sb.append("\nClassificação: ").append(element.getElementsByTagName("classificacao").item(0).getTextContent());
+                    for (int countClassification = 0; countClassification < element.getElementsByTagName("classificacao").getLength(); countClassification++) {
+                        sb.append("\nClassificação: ").append(element.getElementsByTagName("classificacao").item(countClassification).getTextContent());
+                    }
+                    sb.append("\nUnissex: ").append(element.getElementsByTagName("unissex").item(0).getTextContent());
                     sb.append("\nCategoria: ").append(element.getElementsByTagName("categoria").item(0).getTextContent());
                     sb.append("\nSubcategoria: ").append(element.getElementsByTagName("subcategoria").item(0).getTextContent());
                 }
