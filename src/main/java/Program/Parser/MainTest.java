@@ -20,6 +20,7 @@ public class MainTest {
 //        finder.novoSax("produto_prova1a.xml");
 //        finder.testeDom();
 //        finder.listIndividualHierarchy("SKU", "1763822");
-        finder.listIndividualsByRestriction("categoria", "plus-size", "calça", "sim");
+//        finder.listIndividualsByRestriction("categoria", "plus-size", "calça", "sim");
+        finder.individualSatisfiesRestriction("1200827", "sku", "categoria", "calça", "plus-size", "sim");
     }
 }

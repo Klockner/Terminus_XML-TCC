@@ -8,7 +8,6 @@ package Program.Parser;
 import Program.Util.OpenFile;
 import java.util.ArrayList;
 import java.util.Collections;
-import static java.util.Collections.list;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -28,6 +27,7 @@ public class Finder {
     private String nodeLastChild;
     private String idProduct;
     private List<String> listIdProducts;
+    private int countRestrictions;
     
     //Constructor receive the doc
     public Finder(String xmlFileName) {
@@ -35,9 +35,81 @@ public class Finder {
         doc = openFile.createDoc(xmlFileName);
     }
     
-    public String individualSatisfiesRestriction(String individualId, String tagRestriction1, 
+    public String individualSatisfiesRestriction(String individualId, String tagId, String tagRestriction1, 
             String tagRestrictionValue1, String tagRestriction2, String tagRestrictionValue2) {
-        return null;
+        Node nodeRoot = doc.getFirstChild();
+        NodeList nodeList = nodeRoot.getChildNodes();
+        Node node1;
+        sbResult = new StringBuilder();
+        countRestrictions = 0;
+
+        //Get the tag reference of the product
+        node1 = nodeList.item(1);
+        
+        //Call the method for parse the xml recursively
+        recursiveParseForIndividualSatisfiesRestriction(nodeList, node1, individualId, tagId, tagRestriction1, tagRestrictionValue1, tagRestriction2, tagRestrictionValue2);
+        
+        if (countRestrictions > 1) {
+            sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!");
+        } else {
+            sbResult.append("O indivíduo ").append(individualId).append(" NÃO satisfaz as condições!");
+        }
+        return sbResult.toString();
+    }
+    
+    public void recursiveParseForIndividualSatisfiesRestriction(NodeList nodeList,
+            Node nodeNewProduct, String individualId, String tagId, String tagRestriction1, String tagRestrictionValue1,
+            String tagRestriction2, String tagRestrictionValue2) {
+        Node node;
+        
+        for (int i=0; i < nodeList.getLength(); i++) {
+            node = nodeList.item(i);
+            
+            if(node.getNodeType() == Node.ELEMENT_NODE) {
+                //if finds the id
+                if (node.getNodeName().equalsIgnoreCase(tagId)) {
+                    if (node.getTextContent().equalsIgnoreCase(individualId)) {
+                        found = true;
+                    } else {
+                        found = false;
+                    }
+                }
+                if (found) {
+                    //If the element has children
+                    if (node.getChildNodes().getLength() > 1) {
+                        //The tag that represents new element
+                        if (nodeNewProduct.getNodeName().equals(node.getNodeName())) {
+                            return;
+                        }
+                        recursiveParseForIndividualSatisfiesRestriction(node.getChildNodes(), nodeNewProduct, individualId, tagId, tagRestriction1, tagRestrictionValue1, tagRestriction2, tagRestrictionValue2);
+                    } else {
+                        //If does not have children and have value
+                        //it is like child, but it represents the value
+                        if (node.getFirstChild() != null) {
+                            if ((node.getNodeName().equalsIgnoreCase(tagRestriction1)) &&
+                                    (node.getTextContent().equalsIgnoreCase(tagRestrictionValue1))) {
+                                sbResult.append("Indivíduo identificado por ").append(individualId).append(" satisfaz restrição 1");
+                                sbResult.append("\n").append(tagRestriction1).append(": ").append(tagRestrictionValue1).append("\n\n");
+                                countRestrictions++;
+                            }
+                            if ((node.getNodeName().equalsIgnoreCase(tagRestriction2)) &&
+                                    (node.getTextContent().equalsIgnoreCase(tagRestrictionValue2))) {
+                                sbResult.append("Indivíduo identificado por ").append(individualId).append(" satisfaz restrição 2");
+                                sbResult.append("\n").append(tagRestriction2).append(": ").append(tagRestrictionValue2).append("\n\n");
+                                countRestrictions++;
+                            }
+                        }
+                    }
+                } else {
+                    recursiveParseForIndividualSatisfiesRestriction(node.getChildNodes(), nodeNewProduct, individualId, tagId, tagRestriction1, tagRestrictionValue1, tagRestriction2, tagRestrictionValue2);
+                }
+                //Se não encontrar o id continua o parse
+            } else {
+                if (node.getChildNodes().getLength() > 1) {
+                    recursiveParseForIndividualSatisfiesRestriction(node.getChildNodes(), nodeNewProduct, individualId, tagId, tagRestriction1, tagRestrictionValue1, tagRestriction2, tagRestrictionValue2);
+                } 
+            }
+        }    
     }
     
     

@@ -117,7 +117,7 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup_Proofs.add(jRadioButton_Proof6b);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OWL API - TEST WINDOW");
+        setTitle("TERMINUS - XML");
         setName("janelaPrograma"); // NOI18N
 
         jLabel_Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1184,6 +1184,10 @@ public class MainWindow extends javax.swing.JFrame {
                         jTextField_ConstraintValue1.getText(), jTextField_ConstraintValue2.getText());
                 break;
             case 5: //Individual Satisfies Constraint function
+                result = controlClass.individualSatisfiesRestriction(jTextField_ModelFile.getText(),
+                        jTextField_IndividualID.getText(), jTextField_IndividualIdTag.getText(),
+                        jTextField_ConstraintTag1.getText(), jTextField_ConstraintValue1.getText(),
+                        jTextField_ConstraintTag2.getText(), jTextField_ConstraintValue2.getText());
                 break;
             case 6: //List Tag Values function
                 break;
