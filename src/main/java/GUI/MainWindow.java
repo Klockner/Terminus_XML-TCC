@@ -117,7 +117,7 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup_Proofs.add(jRadioButton_Proof6b);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("OWL API - TEST WINDOW");
+        setTitle("TERMINUS - XML");
         setName("janelaPrograma"); // NOI18N
 
         jLabel_Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

@@ -15,7 +15,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="OWL API - TEST WINDOW"/>
+    <Property name="title" type="java.lang.String" value="TERMINUS - XML"/>
     <Property name="name" type="java.lang.String" value="janelaPrograma" noResource="true"/>
   </Properties>
   <SyntheticProperties>
