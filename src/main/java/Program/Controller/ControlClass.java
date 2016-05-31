@@ -1,4 +1,4 @@
-package Program;
+package Program.Controller;
 
 //Esta classe aqui é para ser substituida pelo programa em XML que você fizer.
 

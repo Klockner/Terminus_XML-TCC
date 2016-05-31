@@ -1,6 +1,6 @@
 package GUI;
 
-import Program.ControlClass;
+import Program.Controller.ControlClass;
 import Program.Util.OpenFile;
 import Program.Validation.Validates;
 import java.awt.Toolkit;
@@ -891,7 +891,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton_Proof2ActionPerformed
 
     private void jRadioButton_Proof3aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3aActionPerformed
-        this.jTextField_ModelFile.setText("produto_prova3a.xml");
+        this.jTextField_ModelFile.setText("produto_prova3.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Inconsistência de Asserções");
         this.jRadioButton_ModelCheckActionPerformed(evt);
@@ -906,7 +906,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton_Proof3aActionPerformed
 
     private void jRadioButton_Proof3bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof3bActionPerformed
-        this.jTextField_ModelFile.setText("produto_prova3b.xml");
+        this.jTextField_ModelFile.setText("produto_prova3.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Inconsistência de Asserções");
         this.jRadioButton_ListIndividualTagsActionPerformed(evt);
@@ -944,7 +944,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton_Proof4ActionPerformed
 
     private void jRadioButton_Proof5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton_Proof5ActionPerformed
-        this.jTextField_ModelFile.setText("produto_prova5.xml");
+        this.jTextField_ModelFile.setText("produto_prova2.xml");
         this.loadModel();
         this.jLabel_ProofTitle.setText("Recuperação – Listar Indivíduos de Conceito");
         this.jRadioButton_ListIndividualsByConstraintActionPerformed(evt);
