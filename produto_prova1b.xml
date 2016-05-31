@@ -32,7 +32,7 @@
         <descricao>Blusa, confeccionada em flamê. Modelo de mangas longa e com decote canoa.</descricao>
         <marca>Moda POP</marca>
         <loja>Post Haus</loja>
-        <preco>34.99</preco>
+        <preco>24.99</preco>
         <preco-promocao></preco-promocao>
         <numero-de-parcelas></numero-de-parcelas>
         <valor-da-parcela></valor-da-parcela>
@@ -65,6 +65,7 @@
             <cor>Azul</cor>
             <textura></textura>
         </preenchimento>
+        <tamanho>PP</tamanho>
         <tamanho>P</tamanho>
         <tamanho>M</tamanho>
         <classificacao>Moda Feminina</classificacao>

@@ -1,7 +1,7 @@
 package Starter;
 
 import GUI.MainWindow;
-import Program.ControlClass;
+import Program.Controller.ControlClass;
 
 //Application start class
 public class Starter {
