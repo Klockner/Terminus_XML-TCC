@@ -162,6 +162,7 @@ public class Finder {
         NodeList nodeList = nodeRoot.getChildNodes();
         Node node1;
         sbResult = new StringBuilder();
+        listaMensagens = new ArrayList<>();
         countRestrictions = 0;
 
         //Get the tag reference of the product
@@ -172,13 +173,16 @@ public class Finder {
         
         if ("".equals(tagRestriction1) || "".equals(tagRestriction2)) {
             if (countRestrictions > 0) {
-                sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!");
+                sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!\n\n");
+                sbResult.append(listaMensagens.get(0));
             } else {
                 sbResult.append("O indivíduo ").append(individualId).append(" NÃO satisfaz as condições!");
             }
         } else {
             if (countRestrictions > 1) {
-                sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!");
+                sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!\n\n");
+                sbResult.append(listaMensagens.get(1));
+                sbResult.append(listaMensagens.get(0));
             } else {
                 sbResult.append("O indivíduo ").append(individualId).append(" NÃO satisfaz as condições!");
             }
@@ -228,14 +232,16 @@ public class Finder {
                         if (node.getFirstChild() != null) {
                             if ((node.getNodeName().equalsIgnoreCase(tagRestriction1)) &&
                                     (node.getTextContent().equalsIgnoreCase(tagRestrictionValue1))) {
-                                sbResult.append("Indivíduo identificado por ").append(individualId).append(" satisfaz restrição 1");
-                                sbResult.append("\n").append(tagRestriction1).append(": ").append(tagRestrictionValue1).append("\n\n");
+//                                sbResult.append("Indivíduo identificado por ").append(individualId).append(" satisfaz restrição 1");
+//                                sbResult.append("\n").append(tagRestriction1).append(": ").append(tagRestrictionValue1).append("\n\n");
+                                listaMensagens.add("Indivíduo identificado por " + individualId + " satisfaz restrição 1\n" + tagRestriction1 + ": " + tagRestrictionValue1 + "\n\n");
                                 countRestrictions++;
                             }
                             if ((node.getNodeName().equalsIgnoreCase(tagRestriction2)) &&
                                     (node.getTextContent().equalsIgnoreCase(tagRestrictionValue2))) {
-                                sbResult.append("Indivíduo identificado por ").append(individualId).append(" satisfaz restrição 2");
-                                sbResult.append("\n").append(tagRestriction2).append(": ").append(tagRestrictionValue2).append("\n\n");
+//                                sbResult.append("Indivíduo identificado por ").append(individualId).append(" satisfaz restrição 2");
+//                                sbResult.append("\n").append(tagRestriction2).append(": ").append(tagRestrictionValue2).append("\n\n");
+                                listaMensagens.add("Indivíduo identificado por " + individualId + " satisfaz restrição 2\n" + tagRestriction2 + ": " + tagRestrictionValue2 + "\n\n");
                                 countRestrictions++;
                             }
                         }
@@ -267,6 +273,7 @@ public class Finder {
         Node node1;
         sbResult = new StringBuilder();
         listIdProducts = new ArrayList<>();
+        countRestrictions = 0;
 
         //Get the tag reference of the product
         node1 = nodeList.item(1);
@@ -284,14 +291,20 @@ public class Finder {
                 if (Collections.frequency(listIdProducts, key) > 0) {
                     System.out.println(key);
                     sbResult.append(key).append("\n");
+                    countRestrictions++;
                 }
             } else {
                 if (Collections.frequency(listIdProducts, key) > 1) {
                     System.out.println(key);
                     sbResult.append(key).append("\n");
+                    countRestrictions++;
                 }
             }
         }
+        if (countRestrictions == 0) {
+            sbResult.append("Nada foi encontrado!\n");
+        }
+        
         return sbResult.toString();
     }
     
