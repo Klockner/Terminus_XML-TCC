@@ -29,7 +29,7 @@ public class Finder {
     private String idProduct;
     private List<String> listIdProducts;
     private int countRestrictions;
-    private List<String> listTargets;
+    private List<String> listaMensagens;
     
     //Constructor receive the doc
     public Finder(String xmlFileName) {
@@ -52,7 +52,6 @@ public class Finder {
         NodeList nodeList = nodeRoot.getChildNodes();
         Node node1;
         sbResult = new StringBuilder();
-        listTargets = new ArrayList<>();
 
         //Get the tag reference of the product
         node1 = nodeList.item(1);
@@ -107,7 +106,7 @@ public class Finder {
                                     Element element = (Element) node.getParentNode();
                                     System.out.println(element.getElementsByTagName(tagTarget).item(0).getTextContent());
                                     sbResult.append(element.getElementsByTagName(tagTarget).item(0).getTextContent()).append("\n");
-                                }
+                                } 
                             }
                             if ((node.getNodeName().equalsIgnoreCase(tagRestriction2)) &&
                                     (node.getTextContent().equalsIgnoreCase(tagRestrictionValue2))) {
@@ -171,10 +170,18 @@ public class Finder {
         //Call the method for parse the xml recursively
         recursiveParseForIndividualSatisfiesRestriction(nodeList, node1, individualId, tagId, tagRestriction1, tagRestrictionValue1, tagRestriction2, tagRestrictionValue2);
         
-        if (countRestrictions > 1) {
-            sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!");
+        if ("".equals(tagRestriction1) || "".equals(tagRestriction2)) {
+            if (countRestrictions > 0) {
+                sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!");
+            } else {
+                sbResult.append("O indivíduo ").append(individualId).append(" NÃO satisfaz as condições!");
+            }
         } else {
-            sbResult.append("O indivíduo ").append(individualId).append(" NÃO satisfaz as condições!");
+            if (countRestrictions > 1) {
+                sbResult.append("O indivíduo ").append(individualId).append(" satisfaz as condições!");
+            } else {
+                sbResult.append("O indivíduo ").append(individualId).append(" NÃO satisfaz as condições!");
+            }
         }
         return sbResult.toString();
     }
@@ -267,7 +274,7 @@ public class Finder {
         //Call the method for parse the xml recursively
         recursiveParseListIndividualByRestriction(nodeList, node1, tagRestriction1, tagRestriction2, tagRestrictionValue1, tagRestrictionValue2);
         
-        sbResult.append("Indivíduos que satisfazem as restrições\n\n");
+        sbResult.append("Indivíduos que satisfazem as restrições:\n\n");
         
         //Take the ids that appear more than one time, matches with all two conditions
         Set<String> unique = new HashSet<>(listIdProducts);
