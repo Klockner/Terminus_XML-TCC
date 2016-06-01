@@ -873,10 +873,11 @@ public class MainWindow extends javax.swing.JFrame {
         this.jRadioButton_IndividualSatisfiesConstraintActionPerformed(evt);
         this.jRadioButton_IndividualSatisfiesConstraint.setSelected(true);
         this.jTextField_ConstraintTag1.setText("categoria");
-        this.jTextField_ConstraintValue1.setText("calca");
-        this.jTextField_ConstraintTag2.setText("plus_size");
+        this.jTextField_ConstraintValue1.setText("calça");
+        this.jTextField_ConstraintTag2.setText("plus-size");
         this.jTextField_ConstraintValue2.setText("sim");
         this.jTextField_IndividualID.setText("1200827");
+        this.jTextField_IndividualIdTag.setText("sku");
         this.jTextArea_Description.setForeground(new java.awt.Color(204, 0, 0));
         this.jTextArea_Description.setText(
                 "Mostrar que uma calça\n"
@@ -912,6 +913,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.jRadioButton_ListIndividualTagsActionPerformed(evt);
         this.jRadioButton_ListIndividualTags.setSelected(true);
         this.jTextField_IndividualID.setText("1763822");
+        this.jTextField_IndividualIdTag.setText("sku");
         this.jTextArea_Description.setForeground(new java.awt.Color(204, 0, 0));
         this.jTextArea_Description.setText(
                 "Mostrar que um produto\n"
@@ -931,6 +933,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.jRadioButton_ListIndividualHierarchyActionPerformed(evt);
         this.jRadioButton_ListIndividualHierarchy.setSelected(true);
         this.jTextField_IndividualID.setText("1246194");
+        this.jTextField_IndividualIdTag.setText("sku");
         this.jTextArea_Description.setForeground(new java.awt.Color(204, 0, 0));
         this.jTextArea_Description.setText(
                 "Mostrar a forma de\n"
@@ -950,8 +953,8 @@ public class MainWindow extends javax.swing.JFrame {
         this.jRadioButton_ListIndividualsByConstraintActionPerformed(evt);
         this.jRadioButton_ListIndividualsByConstraint.setSelected(true);
         this.jTextField_ConstraintTag1.setText("categoria");
-        this.jTextField_ConstraintValue1.setText("calca");
-        this.jTextField_ConstraintTag2.setText("plus_size");
+        this.jTextField_ConstraintValue1.setText("calça");
+        this.jTextField_ConstraintTag2.setText("plus-size");
         this.jTextField_ConstraintValue2.setText("sim");
         this.jTextArea_Description.setForeground(new java.awt.Color(204, 0, 0));
         this.jTextArea_Description.setText(
