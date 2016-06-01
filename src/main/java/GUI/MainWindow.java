@@ -1220,15 +1220,11 @@ public class MainWindow extends javax.swing.JFrame {
         } else if (xmlFileName.contains("produto_prova4")) {
             xsdFileName = "produto_prova4.xsd";
             isValid = Validates.validateModel(xmlFileName, xsdFileName);
-        } else if (xmlFileName.contains("produto_prova5")) {
-            xsdFileName = "produto_prova5.xsd";
-            isValid = Validates.validateModel(xmlFileName, xsdFileName);
         } else {
             String[] xsdFileSplit = xmlFileName.split(".xml");
             xsdFileName = xsdFileSplit[0].concat(".xsd");
             isValid = Validates.validateModel(xmlFileName, xsdFileName);
         }
-        
         if (isValid) {
             return "Modelo válido!";
         } else {
