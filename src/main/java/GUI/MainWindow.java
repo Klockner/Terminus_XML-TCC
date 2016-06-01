@@ -825,6 +825,7 @@ public class MainWindow extends javax.swing.JFrame {
         this.loadModel();
         this.jLabel_ProofTitle.setText("Classificação - Vestidos Pertencem a Moda Feminina");
         this.jRadioButton_ListTagValuesActionPerformed(evt);
+        this.jRadioButton_ListTagValues.setSelected(true);
         this.jTextField_ConstraintTag1.setText("categoria");
         this.jTextField_ConstraintValue1.setText("vestido");
         this.jTextField_ConstraintTag2.setText("");
